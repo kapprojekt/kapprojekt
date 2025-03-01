@@ -1,0 +1,78 @@
+local_backend:
+  url: http://localhost:8082/api/v1
+  allowed_hosts: ["192.168.0.1"]
+
+backend:
+  name: git-gateway
+  branch: main
+
+media_folder: "public/media"
+public_folder: "public/media"
+
+collections:
+  - label: "Podstrony"
+    name: "pages"
+    files:
+      - label: "Strona główna"
+        name: "home"
+        file: "content/pages/homepage.md"
+        fields:
+          - { label: "Title", name: "title", widget: "string" }
+          - { label: "Subtitle", name: "subtitle", widget: "string" }
+          - {
+              label: "Background Image",
+              name: "backgroundImage",
+              widget: "image",
+              required: false,
+            }
+          - { label: "Button Text", name: "buttonText", widget: "string" }
+
+  - label: "Porfolio"
+    name: "portfolio"
+    folder: "content/portfolio"
+    slug: "index"
+    create: true
+    fields:
+      - { label: "Tytuł", name: "title", widget: "string" }
+      - {
+          label: "Paragrafy",
+          name: "paragraphs",
+          widget: "list",
+          summary: "{{fields.paragraph}}",
+          field: { label: "Tekst", name: "paragraph", widget: "text" },
+        }
+
+  - label: "Projekty"
+    name: "projects_relation"
+    widget: "object"
+    folder: "content/portfolio/projects"
+    create: true
+    fields:
+      - label: "Tytuł"
+        name: "title"
+        widget: "string"
+      - label: "Template Key"
+        name: "templateKey"
+        widget: "hidden"
+        default: "{{fields.title}}"
+      - label: "Opis"
+        name: "description"
+        widget: "text"
+      - label: "Lokalizacja"
+        name: "location"
+        widget: "string"
+        required: false
+      - label: "Data"
+        name: "date"
+        widget: "string"
+        required: false
+      - label: "Typ projektu"
+        name: "project_type"
+        widget: "string"
+        required: false
+      - label: "Zdjęcia"
+        name: "images"
+        widget: "list"
+        required: true
+        summary: "{{fields.image}}"
+        field: { label: "Obraz", name: "image", widget: "image" }
