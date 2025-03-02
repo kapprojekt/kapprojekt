@@ -17,15 +17,17 @@ export default function Home() {
           height={1200} />
 
         <header>
-          <h1 className="text-8xl font-bold drop-shadow-[0_0_10px_black]">KAP Projekt</h1>
+          <h1 className="text-8xl font-semibold drop-shadow-[0_0_25px_rgb(243,239,233)]">KAP Projekt</h1>
           <div className="mt-4 flex justify-center">
             {
               labels.map(label => (
                 <span
                   key={label}
-                  className="bg-[rgb(0,0,0,0.2)] backdrop-blur-sm px-4 py-2 mx-1
+                  className="bg-[rgb(243,239,233,0.2)] backdrop-blur-sm px-4 py-2 mx-1
                     font-semibold rounded-sm">
-                    {label}
+                      <span className="drop-shadow-[0_0_10px_white]">
+                        {label}
+                      </span>
                 </span>))
             }
           </div>

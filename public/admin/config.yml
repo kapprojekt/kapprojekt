@@ -1,5 +1,5 @@
 local_backend:
-  url: http://localhost:8082/api/v1
+  url: http://localhost:8081/api/v1
   allowed_hosts: ["192.168.0.1"]
 
 backend:
@@ -17,35 +17,52 @@ collections:
         name: "home"
         file: "content/pages/homepage.md"
         fields:
-          - { label: "Title", name: "title", widget: "string" }
-          - { label: "Subtitle", name: "subtitle", widget: "string" }
+          - { label: "Tytuł", name: "title", widget: "string" }
           - {
-              label: "Background Image",
+              label: "Paragrafy",
+              name: "paragraphs",
+              widget: "list",
+              summary: "{{fields.paragraph}}",
+              field: { label: "Tekst", name: "paragraph", widget: "text" },
+            }
+          - {
+              label: "Tło",
               name: "backgroundImage",
               widget: "image",
               required: false,
             }
-          - { label: "Button Text", name: "buttonText", widget: "string" }
 
-  - label: "Porfolio"
-    name: "portfolio"
-    folder: "content/portfolio"
-    slug: "index"
-    create: true
-    fields:
-      - { label: "Tytuł", name: "title", widget: "string" }
-      - {
-          label: "Paragrafy",
-          name: "paragraphs",
-          widget: "list",
-          summary: "{{fields.paragraph}}",
-          field: { label: "Tekst", name: "paragraph", widget: "text" },
-        }
+      - label: "Kontakt"
+        name: "contact"
+        file: "content/pages/contact.md"
+        fields:
+          - { label: "Title", name: "title", widget: "string" }
+          - { label: "Subtitle", name: "subtitle", widget: "string" }
+
+      - label: "Cennik"
+        name: "price-list"
+        file: "content/pages/price-list.md"
+        fields:
+          - { label: "Title", name: "title", widget: "string" }
+          - { label: "Subtitle", name: "subtitle", widget: "string" }
+
+      - label: "Porfolio"
+        name: "portfolio"
+        file: "content/pages/portfolio.md"
+        fields:
+          - { label: "Tytuł", name: "title", widget: "string" }
+          - {
+              label: "Paragrafy",
+              name: "paragraphs",
+              widget: "list",
+              summary: "{{fields.paragraph}}",
+              field: { label: "Tekst", name: "paragraph", widget: "text" },
+            }
 
   - label: "Projekty"
-    name: "projects_relation"
+    name: "projects"
     widget: "object"
-    folder: "content/portfolio/projects"
+    folder: "content/projects"
     create: true
     fields:
       - label: "Tytuł"
@@ -76,3 +93,21 @@ collections:
         required: true
         summary: "{{fields.image}}"
         field: { label: "Obraz", name: "image", widget: "image" }
+
+  - label: "Cenniki"
+    name: "price-lists"
+    widget: "object"
+    folder: "content/price-list"
+    create: true
+    fields:
+      - label: "Tytuł"
+        name: "title"
+        widget: "string"
+      - label: "Opis"
+        name: "description"
+        widget: "text"
+      - {
+          label: "Zdjęcie",
+          name: "image",
+          widget: "image"
+        }
