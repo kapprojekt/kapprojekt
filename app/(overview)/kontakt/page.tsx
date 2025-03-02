@@ -1,7 +1,7 @@
 'use client'
 
 // import { Input, TextArea } from '@/components/ui/input';
-import React, { useActionState, useState } from 'react'
+import React, { useActionState} from 'react'
 import { FormState, sendMessage } from '@/lib/actions';
 import Button from '@/components/ui/button';
 
