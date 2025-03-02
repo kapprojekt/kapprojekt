@@ -19,11 +19,11 @@ collections:
         fields:
           - { label: "Tytuł", name: "title", widget: "string" }
           - {
-              label: "Paragrafy",
-              name: "paragraphs",
+              label: "Tagi",
+              name: "tags",
               widget: "list",
-              summary: "{{fields.paragraph}}",
-              field: { label: "Tekst", name: "paragraph", widget: "text" },
+              summary: "{{fields.tag}}",
+              field: { label: "Tekst", name: "tag", widget: "string" },
             }
           - {
               label: "Tło",
@@ -106,8 +106,28 @@ collections:
       - label: "Opis"
         name: "description"
         widget: "text"
-      - {
-          label: "Zdjęcie",
-          name: "image",
-          widget: "image"
-        }
+      - label: "Rodzaj"
+        name: "type"
+        widget: "select"
+        options:
+          - {label: "Pakiety podstawowe", value: "basic" }
+          - {label: "Usługi dodatkowe", value: "additional"}
+        default: "basic"
+      - label: "Zdjęcie"
+        name: "image"
+        widget: "image"
+      - label: "Oferta"
+        name: "offer"
+        widget: "list"
+        fields:
+          - label: "Tytuł"
+            name: "title"
+            widget: "text"
+          - label: "Opis"
+            name: "description"
+            widget: "text"
+          - label: "Zdjęcie"
+            name: "image"
+            widget: "image"
+            required: false
+
