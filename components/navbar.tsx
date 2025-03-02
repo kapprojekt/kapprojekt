@@ -2,16 +2,16 @@
 
 import Image from 'next/image'
 import Link from 'next/link'
-import React, { useState } from 'react'
+import React from 'react'
 
 import logoImage from '@/src/LOGO.png'
-import { usePathname } from 'next/navigation'
-import Button from './ui/button'
+// import { usePathname } from 'next/navigation'
+// import Button from './ui/button'
 
 const Navbar = () => {
-	const pathname = usePathname()
+	// const pathname = usePathname()
 
-	const [isHidden, setIsHidden] = useState(false)
+	// const [isHidden, setIsHidden] = useState(false)
 
 	const links = [
 		{

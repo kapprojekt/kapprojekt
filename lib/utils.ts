@@ -15,7 +15,7 @@ export const getFolderMarkups = (
       const data = matter.read(filePath);
       return data;
     });
-  } catch (error) {
+  } catch {
     return null;
   }
 };
