@@ -1,5 +1,6 @@
 import React from 'react'
 import Button from '../ui/button';
+import Link from 'next/link';
 
 interface PriceListTileProps {
 	isNew?: boolean;
@@ -10,7 +11,7 @@ interface PriceListTileProps {
 
 const PriceListTile = (props: PriceListTileProps) => {
   return (
-	<div className="overflow-hidden bg-white rounded shadow">
+	  <div className="overflow-hidden bg-white rounded shadow">
         <div className="p-4 h-full flex flex-col justify-between items-center">
             <div className="relative">
                 <img className="object-cover w-full h-full" src="https://cdn.rareblocks.xyz/collection/celebration/images/blog/2/blog-post-1.jpg" alt="" />
@@ -22,7 +23,9 @@ const PriceListTile = (props: PriceListTileProps) => {
             </div>
             <p className="mt-5 text-2xl text-center font-semibold">{props.title}</p>
             <p className="my-4 text-base text-gray-600">{props.text}</p>
-            <Button>Szczegóły</Button>
+            <Link href={`/cennik/${props.title}`}>
+              <Button>Szczegóły</Button>
+            </Link>
         </div>
     </div>
   )
