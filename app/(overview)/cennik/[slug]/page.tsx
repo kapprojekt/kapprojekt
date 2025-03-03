@@ -6,7 +6,8 @@ interface OfferPageProps {
 	}
 }
 
-const OfferPage = () => {
+const OfferPage = ({params}: OfferPageProps) => {
+	console.log(params);
   return (
 	<div>OfferPage</div>
   )
