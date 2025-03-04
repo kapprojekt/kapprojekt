@@ -4,7 +4,7 @@ import Image from 'next/image'
 import Link from 'next/link'
 import React, { useEffect, useRef, useState } from 'react'
 
-import logoImage from '@/src/LOGO.png'
+import logoImage from '@/src/logo-black.png'
 import { usePathname } from 'next/navigation'
 // import Button from './ui/button'
 
@@ -52,7 +52,9 @@ const Navbar = () => {
   	return (
 		<nav className={`z-20 fixed top-0 left-0 right-0 flex justify-between items-center px-10 before:absolute
 			before:-z-10 before:inset-0 before:w-full before:h-full before:bg-[rgb(243,239,233,0.2)] before:backdrop-blur-sm`}>
-			<Image className='w-16 h-16 drop-shadow-[0_0_4px_white]' src={logoImage} alt='logo' width={80} height={80} />
+			<Link href='/'>
+				<Image className='w-14 h-14 my-2' src={logoImage} alt='logo' width={1000} height={1000} />
+			</Link>
 			<div className='hidden lg:block'>
 				{links.map((link) => (
 					<Link
@@ -62,7 +64,7 @@ const Navbar = () => {
 							{link.label}
 					</Link>))}
 			</div>
-			<div ref={refMenu}>
+			<div className='lg:hidden' ref={refMenu}>
 				<button onClick={() => setIsOpen(!isOpen)} className="lg:hidden relative flex justify-center items-center w-9 h-8 hover:bg-[rgba(255,255,255,0.2)] rounded-sm">
 					<span className={`absolute h-0.5 w-4/5 bg-black block rounded-4xl duration-300 ${isOpen ? 'rotate-45' : '-translate-y-2'}`} />
 					<span className={`absolute h-0.5 w-4/5 bg-black block rounded-4xl duration-200 ${isOpen ? 'opacity-0' : 'opacity-100'}`} />

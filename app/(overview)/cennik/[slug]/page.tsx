@@ -1,15 +1,19 @@
 import React from 'react'
 
 interface OfferPageProps {
-	params: {
+	params: Promise<{
 		slug: string;
-	}
+	}>
 }
 
-const OfferPage = ({params}: OfferPageProps) => {
-	console.log(params);
+const OfferPage = async ({params}: OfferPageProps) => {
+	const {slug} = await (params)
   return (
-	<div>OfferPage</div>
+	<div className='whitespace-nowrap py-20 overflow-hidden'>
+		<p className='text-wrap'>
+			{slug}
+		</p>
+	</div>
   )
 }
 
