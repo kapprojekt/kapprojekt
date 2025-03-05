@@ -1,11 +1,11 @@
-'use server'
-
 import {z} from 'zod'
 
 export type FormState = {
   errors?: {
     fullName?: string[];
     email?: string[];
+	localisation?: string[];
+	investType?: string[];
     message?: string[];
   };
   message?: string | null;
@@ -16,9 +16,12 @@ const FormSchema = z.object({
 	email: z.string({required_error: 'To pole jest wymagane.'})
 			.min(5, 'Za mało znaków.')
 			.email('Nieprawidłowy email.'),
+	localisation: z.string({required_error: 'To pole jest wymagane.'})
+			.min(3, 'Za mało znaków.'),
+	investType: z.string({invalid_type_error: 'Podano nieprawidłową wartość.'}),
 	message: z.string({required_error: 'To pole jest wymagane.'})
-			.min(10, 'Pole musi mieć od 10 do 500 znaków.')
-			.max(500, 'Pole musi mieć od 10 do 500 znaków.')
+			.min(5, 'Pole musi mieć od 5 do 500 znaków.')
+			.max(500, 'Pole musi mieć od 5 do 500 znaków.')
 })
 
 export async function sendMessage(prevState: FormState, formData: FormData) {
@@ -29,40 +32,34 @@ export async function sendMessage(prevState: FormState, formData: FormData) {
 	if (!validatedFields.success) {
 		return {
 			errors: validatedFields.error.flatten().fieldErrors,
-			message: "Missing Fields. Failed to create Invoice.",
+			message: "Uzupełnij wymagane pola!",
     	};
   	}
 
-	const { fullName, email, message } = validatedFields.data;
+	const { fullName, email, localisation, investType, message } = validatedFields.data;
 
 	let infoMessage = ''
 
-	try {
-		await fetch("https://formsubmit.co/ajax/kapprojekt.service@gmail.com", {
+		const res = await fetch("https://formsubmit.co/ajax/kapprojekt.service@gmail.com", {
 			method: "POST",
 			headers: {
 				'Content-Type': 'application/json',
 				'Accept': 'application/json'
 			},
 			body: JSON.stringify({
-				"Imię i nazwisko": fullName,
-				"Email": email,
-				"Wiadomość": message
+				"Imię i nazwisko": fullName.toString(),
+				"Email": email.toString(),
+				"Wiadomość": message.toString(),
+				"Lokalizacja inwestycji": localisation.toString(),
+				"Rodzaj inwestycji": investType.toString()
 			})
-		}).then(response => response.json())
-		.then(() => {
-			console.log('Sukces!');
-			infoMessage = 'Wiadomość wysłana!'
-		})
-		.catch((error) => {
-			console.log(error);
-			infoMessage = 'Błąd! Wiadomość nie została wysłana.'
 		})
 
-	} catch(error) {
-		console.log(error);
-		infoMessage = 'Wystąpił problem z serwerem.'
-	}
+		const response = await res.json();
+		if(response.success)
+			infoMessage = "Wysłano wiadomość."
+		else
+			infoMessage = "Wystąpił błąd podczas wysyłania."
 
 	return {
 		message: infoMessage

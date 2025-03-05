@@ -1,37 +1,28 @@
 'use client'
 
 // import { Input, TextArea } from '@/components/ui/input';
-import React, { useActionState} from 'react'
+import React, { useActionState, useEffect, useState} from 'react'
 import { FormState, sendMessage } from '@/lib/actions';
 import Button from '@/components/ui/button';
 
 const ContactPage = () => {
-	// const [isLoading, setIsLoading] = useState(false);
+	const [isLoading, setIsLoading] = useState(false);
 
 	const initialState: FormState = { message: null, errors: {}}
 
 	const [formState, formAction] = useActionState(sendMessage, initialState);
 
-	// if(formState?.message) {
-	// 	setIsLoading(false)
-	// }
+	useEffect(() => {
+		if(formState.message) {
+			setIsLoading(false);
+		}
+	}, [formState])
+
+	const onSubmitCallback = (event: React.FormEvent<HTMLFormElement>) => {
+		setIsLoading(true);
+	}
 
   return (
-	// <main className='pt-24 h-screen'>
-	// 	<header className='my-4'>
-	// 		<h1 className='text-5xl text-center'>Kontakt</h1>
-	// 	</header>
-	// 	<section className='w-full flex justify-center items-center'>
-	// 		<form action={formAction}>
-	// 			<div className='flex flex-col lg:flex-row'>
-	// 				<Input name='fullName' />
-	// 				<Input name='email' />
-	// 			</div>
-	// 			<TextArea name='message' />
-	// 		</form>
-	// 	</section>
-
-	// </main>
 	<section className="py-24">
 		<div className="px-4 mx-auto sm:px-6 lg:px-8 max-w-7xl">
 			<div className="max-w-2xl mx-auto text-center">
@@ -80,12 +71,12 @@ const ContactPage = () => {
 					<div className="px-6 py-12 sm:p-12">
 						<h3 className="text-3xl font-semibold text-center text-gray-900">Wyślij nam wiadomość</h3>
 
-						<form action={formAction} className="mt-14">
+						<form action={formAction} onSubmit={onSubmitCallback} className="mt-14">
 							<div className="grid grid-cols-1 sm:grid-cols-2 gap-x-5 gap-y-4">
 								<div>
 									<label htmlFor="fullName" className="text-base font-medium text-gray-900">Imię i nazwisko</label>
 									<div className="mt-2.5 relative">
-										<input type="text" name="fullName" id="" className="block w-full px-4 py-3 placeholder-gray-500 transition-all duration-200 bg-white border border-gray-200 rounded-md focus:outline-none focus:border-stone-400 caret-stone-400" />
+										<input type="text" name="fullName" id="fullName" className="block w-full px-4 py-3 placeholder-gray-500 transition-all duration-200 bg-white border border-gray-200 rounded-md focus:outline-none focus:border-stone-400 caret-stone-400" />
 									</div>
 									{formState.errors?.fullName &&
 										formState.errors.fullName.map((error: string) => (
@@ -94,11 +85,10 @@ const ContactPage = () => {
 											</p>
 										))}
 								</div>
-
 								<div>
 									<label htmlFor="email" className="text-base font-medium text-gray-900">Email</label>
 									<div className="mt-2.5 relative">
-										<input type="email" name="email" id="" className="block w-full px-4 py-3 placeholder-gray-500 transition-all duration-200 bg-white border border-gray-200 rounded-md focus:outline-none focus:border-stone-400 caret-stone-400" />
+										<input type="email" name="email" id="email" className="block w-full px-4 py-3 placeholder-gray-500 transition-all duration-200 bg-white border border-gray-200 rounded-md focus:outline-none focus:border-stone-400 caret-stone-400" />
 									</div>
 									{formState.errors?.email &&
 										formState.errors.email.map((error: string) => (
@@ -107,11 +97,38 @@ const ContactPage = () => {
 											</p>
 										))}
 								</div>
-
+								<div>
+									<label htmlFor="localisation" className="text-base font-medium text-gray-900">Lokalizacja inwestycji</label>
+									<div className="mt-2.5 relative">
+										<input type="text" name="localisation" id="localisation" className="block w-full px-4 py-3 placeholder-gray-500 transition-all duration-200 bg-white border border-gray-200 rounded-md focus:outline-none focus:border-stone-400 caret-stone-400" />
+									</div>
+									{formState.errors?.localisation &&
+										formState.errors.localisation.map((error: string) => (
+											<p className="mt-2 text-sm text-red-500" key={error}>
+											{error}
+											</p>
+										))}
+								</div>
+								<div>
+									<label htmlFor="investType" className="text-base font-medium text-gray-900">Rodzaj inwestycji</label>
+									<div className="mt-2.5 relative">
+										<select name="investType" id="investType" className="block w-full px-4 py-3 transition-all duration-200 bg-white border border-gray-200 rounded-md focus:outline-none focus:border-stone-400 caret-stone-400">
+											<option defaultValue='Wykończenie od stanu deweloperskiego'>Wykończenie od stanu deweloperskiego</option>
+											<option value='Wykończenie mieszkania z rynku wtórnego'>Wykończenie mieszkania z rynku wtórnego</option>
+											<option value='Remont'>Remont</option>
+										</select>
+									</div>
+									{formState.errors?.investType &&
+										formState.errors.investType.map((error: string) => (
+											<p className="mt-2 text-sm text-red-500" key={error}>
+											{error}
+											</p>
+										))}
+								</div>
 								<div className="sm:col-span-2">
 									<label htmlFor="message" className="text-base font-medium text-gray-900">Wiadomość</label>
 									<div className="mt-2.5 relative">
-										<textarea name="message" id="" className="block w-full px-4 py-3 placeholder-gray-500 transition-all duration-200 bg-white border border-gray-200 rounded-md resize-y focus:outline-none focus:border-stone-400 caret-stone-400" rows={4}></textarea>
+										<textarea name="message" id="message" className="block w-full px-4 py-3 placeholder-gray-500 transition-all duration-200 bg-white border border-gray-200 rounded-md resize-y focus:outline-none focus:border-stone-400 caret-stone-400" rows={4}></textarea>
 									</div>
 									{formState.errors?.message &&
 										formState.errors.message.map((error: string) => (
@@ -122,8 +139,8 @@ const ContactPage = () => {
 								</div>
 
 								<div className="sm:col-span-2 mt-2">
-									<Button type='submit'>Wyślij</Button>
-									{formState.message && <p>{formState.message}</p>}
+									<Button type='submit' loading={isLoading}>Wyślij</Button>
+									{formState.message && <p className='text-center text-sm mt-2'>{formState.message}</p>}
 								</div>
 							</div>
 						</form>
@@ -132,7 +149,6 @@ const ContactPage = () => {
 			</div>
 		</div>
 	</section>
-
   )
 }
 
