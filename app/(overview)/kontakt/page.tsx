@@ -18,7 +18,7 @@ const ContactPage = () => {
 		}
 	}, [formState])
 
-	const onSubmitCallback = (event: React.FormEvent<HTMLFormElement>) => {
+	const onSubmitCallback = () => {
 		setIsLoading(true);
 	}
 
