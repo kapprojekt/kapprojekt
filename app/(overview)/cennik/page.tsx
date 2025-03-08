@@ -1,23 +1,41 @@
 import PriceListTile from '@/components/price-list/price-list-tile'
+import { PriceListInterface } from '@/lib/types';
+import { getFolderMarkups } from '@/lib/utils'
 import React from 'react'
 
-const PriceListPage = () => {
+const PricesListPage = () => {
+	const priceLists = getFolderMarkups('content/price-list');
+
+	if (!priceLists) {
+		return <p className='py-32 text-4xl text-center'>Wystąpił błąd w czasie pobierania danych!</p>
+	}
+
+	const priceListData = priceLists.map(priceList => priceList.data) as PriceListInterface[]
+	console.log(priceLists);
+
   return (
 	<section className="py-24">
 		<div className="px-4 mx-auto sm:px-6 lg:px-8 max-w-7xl">
 			<div className="flex items-end justify-between">
 				<div className="flex-1 text-center">
-					<h2 className="text-3xl font-bold leading-tight text-black sm:text-4xl lg:text-5xl">Cennik</h2>
-					<p className="max-w-xl mx-auto mt-4 text-base leading-relaxed text-gray-600">Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint. Velit officia consequat duis.</p>
+					<h2 className="font-bold leading-tight text-black text-4xl lg:text-5xl">Cennik</h2>
 				</div>
 			</div>
 
-			<div className="grid max-w-md grid-cols-1 gap-6 mx-auto mt-8 lg:mt-16 lg:grid-cols-3 lg:max-w-full">
-				<PriceListTile title='Projekt Kompleksowy lub Wykonawczy bez realistycznych wizualizacji ' text='od 100 zł/m2' isNew/>
-				<PriceListTile title='Konsultacja Wnętrzarska' text='100 zł lub GRATIS*' />
-				<PriceListTile title='Projekt Funkcjonalny' text='50 zł/m2' />
-				<PriceListTile title='Projekt Kompleksowy' text='150 zł/m2' />
-				<PriceListTile title='Projekt Wykonawczy' text='180 zł/m2' />
+			<h2 className="font-semibold text-center leading-tight mb-4 mt-8 lg:mt-16 text-slate-700 text-3xl lg:text-4xl">Pakiety podstawowe</h2>
+			<div className="grid max-w-md grid-cols-1 gap-6 mx-auto lg:grid-cols-3 lg:max-w-5xl">
+				{priceListData.filter(priceList => priceList.type === 'basic').map(priceList => (
+					<PriceListTile key={priceList.title} priceList={priceList} />
+					))
+				}
+			</div>
+
+			<h2 className="font-semibold text-center leading-tight mb-4 mt-8 lg:mt-16 text-slate-700 text-3xl lg:text-4xl">Usługi dodatkowe</h2>
+			<div className="grid max-w-md grid-cols-1 gap-6 mx-auto lg:grid-cols-3 lg:max-w-5xl">
+				{priceListData.filter(priceList => priceList.type === 'additional').map(priceList => (
+					<PriceListTile key={priceList.title} priceList={priceList} />
+					))
+				}
 			</div>
 		</div>
   	</section>
@@ -25,4 +43,4 @@ const PriceListPage = () => {
   )
 }
 
-export default PriceListPage
+export default PricesListPage

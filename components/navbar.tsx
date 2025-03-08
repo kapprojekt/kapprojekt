@@ -25,8 +25,14 @@ const Navbar = () => {
 			label: 'O nas'
 		},
 		{
+			href: '/portfolio',
+			label: 'Portfolio',
+			disabled: true
+		},
+		{
 			href: '/cennik',
-			label: 'Cennik'
+			label: 'Cennik',
+			disabled: true
 		},
 		{
 			href: '/kontakt',
@@ -60,7 +66,8 @@ const Navbar = () => {
 					<Link
 						key={link.label}
 						className='inline-block px-10 font-bold transition-all hover:-translate-y-0.5
-							hover:drop-shadow-[0_3px_4px_rgba(243,239,233,0.6)]' href={link.href}>
+							hover:drop-shadow-[0_3px_4px_rgba(243,239,233,0.6)]'
+						href={link.href}>
 							{link.label}
 					</Link>))}
 			</div>

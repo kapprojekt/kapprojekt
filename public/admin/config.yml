@@ -1,5 +1,5 @@
 local_backend:
-  url: http://localhost:8081/api/v1
+  url: http://localhost:8082/api/v1
   allowed_hosts: ["192.168.0.1"]
 
 backend:
@@ -7,7 +7,11 @@ backend:
   branch: main
 
 media_folder: "public/media"
-public_folder: "public/media"
+public_folder: "/media"
+
+slug:
+  encoding: "ascii"
+  clean_accents: true
 
 collections:
   - label: "Podstrony"
@@ -98,11 +102,16 @@ collections:
     name: "price-lists"
     widget: "object"
     folder: "content/price-list"
+    slug: "{{slug}}"
     create: true
     fields:
       - label: "Tytuł"
         name: "title"
         widget: "string"
+      - label: "Slug"
+        name: "slug"
+        widget: "hidden"
+        default: "{{slug}}"
       - label: "Opis"
         name: "description"
         widget: "text"

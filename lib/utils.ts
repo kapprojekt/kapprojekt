@@ -13,6 +13,7 @@ export const getFolderMarkups = (
     return files.map((filename) => {
       const filePath = path.join(directoryPath, filename);
       const data = matter.read(filePath);
+      data.data['slug'] = filename.split('.')[0]
       return data;
     });
   } catch {
@@ -29,7 +30,7 @@ export const getMarkup = (
     const file = matter.read(path.join(process.cwd(), directory, filename));
     return file;
   } catch (error) {
-    console.error(error);
+    // console.error(error);
     return null;
   }
 };
