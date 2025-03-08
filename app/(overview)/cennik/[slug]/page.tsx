@@ -35,8 +35,7 @@ const PriceListPage = async ({params}: PriceListPageProps) => {
 				{data.offer.map((offer, index) => (
 
 					<div key={offer.title}>
-						<div className='flex'>
-							{index%2 != 0 && offer.image && <Image className='w-full h-full max-w-[500px] object-cover' src={offer.image} alt={offer.title} width={400} height={400} />}
+						<div className={`flex flex-col justify-center items-center ${index%2 === 0 ? 'lg:flex-row' : 'lg:flex-row-reverse'}`}>
 							<div className='p-10 max-w-[700px] mx-auto'>
 								<div className="flex items-center justify-center w-16 h-16 mx-auto bg-white border-2 border-gray-200 rounded-full shadow">
 									<span className="text-xl font-semibold text-gray-700">{index+1}</span>
@@ -44,7 +43,7 @@ const PriceListPage = async ({params}: PriceListPageProps) => {
 								<h3 className="mt-6 text-xl font-semibold leading-tight text-black md:mt-10">{offer.title}</h3>
 								<p className="mt-4 text-base text-gray-600">{offer.description}</p>
 							</div>
-							{index%2 === 0 && offer.image && <Image className='w-full h-full max-w-[500px] object-cover' src={offer.image} alt={offer.title} width={400} height={400} />}
+							{offer.image && <Image className='w-auto mx-auto max-w-[500px] max-h-[400px]' src={offer.image} alt={offer.title} width={400} height={400} />}
 						</div>
 					</div>
 				))}
