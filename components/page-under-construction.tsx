@@ -20,9 +20,8 @@ const PageUnderContruction = ({img}: {img: StaticImageData}) => {
                 Strona w budowie
               </h1>
               <p className='text-center font-medium text-xl my-16 mx-10 text-stone-700'>
-                Tutaj niedługo powstanie strona!
-                <br />
-                Póki co, zachęcamy zwiedzać inne podstrony {":)"}
+				Przepraszamy, tutaj jeszcze trwają prace.<br />
+                Premiera już w niebawem!
               </p>
              <div className="mt-4 flex gap-1 justify-center flex-wrap">
               <Link href="/">

@@ -133,9 +133,9 @@ collections:
             required: false
             widget: "relation"
             collection: "price-lists"
-            search_fields: ["title", "description", "type.label"]
-            value_field: "{{slug}}"
-            display_fields: ["title", "description", "type.label"]
+            search_fields: ["title", "description"]
+            value_field: "{{slug}}__{{title}}"
+            display_fields: ["title", "description"]
           - label: "Zdjęcie"
             name: "image"
             widget: "image"

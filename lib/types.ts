@@ -12,6 +12,7 @@ export interface PriceListInterface {
 export interface OfferInterface {
 	title: string;
 	description: string;
+	urls?: string[]
 	image?: string;
 }
 

@@ -9,7 +9,7 @@ const PriceListTile = ({priceList}: {priceList: PriceListInterface}) => {
 	  <div className="overflow-hidden bg-white rounded shadow">
         <div className="p-4 h-full flex flex-col justify-between items-center">
             <div className="relative">
-                <Image className="object-cover aspect-square w-full h-full" src={priceList.image} alt={priceList.title} width={400} height={400} />
+                <Image className="object-cover aspect-[4/3] w-full" src={priceList.image} alt={priceList.title} width={400} height={400} />
 				{/* {props.isNew &&
 					<div className="absolute top-4 left-4">
 						<span className="px-4 py-2 text-xs font-semibold tracking-widest text-gray-900 uppercase bg-white rounded-full">Nowość</span>

@@ -24,7 +24,7 @@ export default function Home() {
 
   return (
     <main>
-      <section className="z-0 h-screen w-full relative flex justify-center items-center">
+      <section className="z-10 h-screen w-full relative">
         <Image
           className="-z-10 absolute w-full h-full object-cover"
           src={data.backgroundImage}
@@ -32,8 +32,8 @@ export default function Home() {
           width={1400}
           height={1200} />
 
-        <header>
-          <h1 className="text-6xl sm:text-7xl md:text-8xl text-center font-semibold drop-shadow-[0_0_25px_rgb(243,239,233)]">{data.title}</h1>
+        <header className="text-white bg-[rgba(0,0,0,0.1)] w-full h-full flex flex-col justify-center items-center">
+          <h1 className="text-6xl sm:text-7xl md:text-8xl text-center font-semibold drop-shadow-[0_0_10px_black]">{data.title}</h1>
           <div className="mt-4 flex gap-1 justify-center flex-wrap">
             {
               data.tags.map(label => (
@@ -41,7 +41,7 @@ export default function Home() {
                   key={label}
                   className="bg-[rgb(243,239,233,0.2)] backdrop-blur-sm px-4 py-2
                     font-semibold rounded-sm">
-                      <span className="text-sm md:text-base drop-shadow-[0_0_10px_white]">
+                      <span className="text-sm md:text-base drop-shadow-[0_0_10px_black]">
                         {label}
                       </span>
                 </span>))
