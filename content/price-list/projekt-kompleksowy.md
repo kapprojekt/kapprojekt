@@ -24,6 +24,9 @@ offer:
 
       Zmiany obejmują lokalizację ścianek działowych, punktów eklektycznych i podłączeń wodno-kanalizacyjnych.
     image: /media/elektryka-julka.jpg
+    urls:
+      - konsultacja-wnetrzarska
+      - projekt-kompleksowy
   - title: RYSUNKI 2D (RZUTY)
     description: Po zaakceptowaniu jednego z proponowanych układów, dostaniesz
       rysunek techniczny 2D rzutu.

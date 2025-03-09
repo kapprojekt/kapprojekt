@@ -1,3 +1,5 @@
+import { StaticImageData } from "next/image";
+
 export interface PriceListInterface {
 	title: string;
 	description: string;
@@ -11,4 +13,10 @@ export interface OfferInterface {
 	title: string;
 	description: string;
 	image?: string;
+}
+
+export interface HomePageData {
+	title: string;
+	tags: string[];
+	backgroundImage: string | StaticImageData
 }

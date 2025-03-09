@@ -72,10 +72,6 @@ collections:
       - label: "Tytuł"
         name: "title"
         widget: "string"
-      - label: "Template Key"
-        name: "templateKey"
-        widget: "hidden"
-        default: "{{fields.title}}"
       - label: "Opis"
         name: "description"
         widget: "text"
@@ -102,16 +98,11 @@ collections:
     name: "price-lists"
     widget: "object"
     folder: "content/price-list"
-    slug: "{{slug}}"
     create: true
     fields:
       - label: "Tytuł"
         name: "title"
         widget: "string"
-      - label: "Slug"
-        name: "slug"
-        widget: "hidden"
-        default: "{{slug}}"
       - label: "Opis"
         name: "description"
         widget: "text"
@@ -135,6 +126,16 @@ collections:
           - label: "Opis"
             name: "description"
             widget: "text"
+          - label: "Odnośniki"
+            name: "urls"
+            multiple: true
+            max: 2
+            required: false
+            widget: "relation"
+            collection: "price-lists"
+            search_fields: ["title", "description", "type.label"]
+            value_field: "{{slug}}"
+            display_fields: ["title", "description", "type.label"]
           - label: "Zdjęcie"
             name: "image"
             widget: "image"
