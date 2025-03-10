@@ -23,8 +23,6 @@ const PriceListPage = async ({params}: PriceListPageProps) => {
 
 	const data = priceList.data as PriceListInterface;
 
-	console.log(data.offer);
-
   return (
 	<section className="py-24 bg-[rgb(243,239,233)]">
 		<div className="px-4 mx-auto max-w-7xl sm:px-6 lg:px-8">
@@ -59,7 +57,7 @@ const PriceListPage = async ({params}: PriceListPageProps) => {
 										</div>
 									)}
 								</div>
-								{offer.image && <Image className='w-full object-contain mx-auto max-w-[500px] max-h-[400px]' src={offer.image} alt={offer.title} width={400} height={400} />}
+								{offer.image && <Image className='w-full h-auto object-contain mx-auto max-w-[500px]' src={offer.image} alt={offer.title} width={400} height={400} />}
 							</div>
 						</div>
 					))}

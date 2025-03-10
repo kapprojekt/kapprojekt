@@ -11,7 +11,6 @@ const PricesListPage = () => {
 	}
 
 	const priceListData = priceLists.map(priceList => priceList.data) as PriceListInterface[]
-	console.log(priceLists);
 
   return (
 	<section className="py-24">
