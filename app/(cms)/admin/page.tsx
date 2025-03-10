@@ -2,7 +2,8 @@
 
 export default function Admin() {
   return (
-    <>
+    <html
+      lang="pl">
       <head>
         <link href="admin/config.yml" type="text/yaml" rel="cms-config-url" />
         <script
@@ -10,10 +11,13 @@ export default function Admin() {
           async
         ></script>
       </head>
+      <body
+        className="__className_ff75e6 antialiased">
       <script
         src="https://unpkg.com/decap-cms@^3.0.0/dist/decap-cms.js"
         async
-      ></script>
-    </>
+        ></script>
+      </body>
+    </html>
   );
 }
