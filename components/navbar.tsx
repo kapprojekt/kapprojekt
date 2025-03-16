@@ -56,7 +56,7 @@ const Navbar = () => {
   	}, [pathname]);
 
   	return (
-		<nav className={`z-20 fixed top-0 left-0 right-0 flex justify-between items-center px-10 before:absolute
+		<nav className={`z-50 fixed top-0 left-0 right-0 flex justify-between items-center px-10 before:absolute
 			before:-z-10 before:inset-0 before:w-full before:h-full before:bg-[rgb(243,239,233,0.2)] before:backdrop-blur-sm`}>
 			<Link href='/'>
 				<Image className='w-14 h-14 my-2' src={logoImage} alt='logo' width={1000} height={1000} />
@@ -66,7 +66,7 @@ const Navbar = () => {
 					<Link
 						key={link.label}
 						className={`inline-block px-10 py-2 border-y-2 border-transparent font-bold transition-all ${pathname === link.href ? `
-								hover:drop-shadow-none hover:transform-none border-b-stone-500` : `hover:-translate-y-0.5
+								hover:drop-shadow-none hover:transform-none border-b-stone-600` : `hover:-translate-y-0.5
 							hover:drop-shadow-[0_3px_4px_rgba(0,0,0,0.2)]`}`}
 						href={link.href}>
 							{link.label}

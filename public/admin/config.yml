@@ -34,6 +34,29 @@ collections:
               widget: "image",
               required: false,
             }
+          - {
+              label: "Social media",
+              name: "socialMedia",
+              widget: "list",
+              required: "false",
+              fields: [
+                {
+                  label: "Link",
+                  name: "url",
+                  widget: "string"
+                },
+                {
+                  label: "Rodzaj",
+                  name: "type",
+                  widget: "select",
+                  options: [
+                    { label: "Instagram", value: "ig"},
+                    { label: "Facebook", value: "fb"}
+                  ],
+                  default: "ig"
+                }
+              ]
+            }
 
       - label: "Kontakt"
         name: "contact"

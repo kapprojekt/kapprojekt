@@ -59,10 +59,10 @@ const ContactPage = () => {
 					</div>
 
 					<div className="overflow-hidden flex justify-center md:flex-col gap-4 text-gray-500 font-thin">
-						<Link href='#' className="p-6 aspect-square bg-white rounded-xl">
+						<Link href='https://www.instagram.com/kap.projekt/' target="_blank" className="p-6 aspect-square bg-white rounded-xl duration-300 hover:bg-stone-500 hover:text-white hover:scale-95">
 							<FaInstagram className='w-8 h-8' />
 						</Link>
-						<Link href='#' className="p-6 aspect-square bg-white rounded-xl">
+						<Link href='https://www.facebook.com/KAPProjekt/' target="_blank" className="p-6 aspect-square bg-white rounded-xl duration-300 hover:bg-stone-500 hover:text-white hover:scale-95">
 							<FaFacebookF className='w-8 h-8' />
 						</Link>
 					</div>
