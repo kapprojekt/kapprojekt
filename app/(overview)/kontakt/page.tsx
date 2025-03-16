@@ -4,6 +4,8 @@
 import React, { useActionState, useEffect, useState} from 'react'
 import { FormState, sendMessage } from '@/lib/actions';
 import Button from '@/components/ui/button';
+import { FaFacebookF, FaInstagram } from 'react-icons/fa6';
+import Link from 'next/link';
 
 const ContactPage = () => {
 	const [isLoading, setIsLoading] = useState(false);
@@ -31,8 +33,8 @@ const ContactPage = () => {
 			</div>
 
 			<div className="max-w-5xl mx-auto mt-12 sm:mt-16">
-				<div className="grid grid-cols-1 gap-6 px-8 text-center md:px-0 md:grid-cols-2">
-					<div className="overflow-hidden bg-white rounded-xl">
+				<div className="flex flex-col md:flex-row gap-6 px-8 text-center md:px-0">
+					<div className="overflow-hidden bg-white rounded-xl flex-1">
 						<div className="p-6">
 							<svg className="flex-shrink-0 w-10 h-10 mx-auto text-gray-400" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
 								<path
@@ -47,7 +49,7 @@ const ContactPage = () => {
 						</div>
 					</div>
 
-					<div className="overflow-hidden bg-white rounded-xl">
+					<div className="overflow-hidden bg-white rounded-xl flex-1">
 						<div className="p-6">
 							<svg className="flex-shrink-0 w-10 h-10 mx-auto text-gray-400" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
 								<path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1} d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
@@ -56,15 +58,14 @@ const ContactPage = () => {
 						</div>
 					</div>
 
-					{/* <div className="overflow-hidden bg-white rounded-xl">
-						<div className="p-6">
-							<svg className="flex-shrink-0 w-10 h-10 mx-auto text-gray-400" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-								<path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1} d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z" />
-								<path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1} d="M15 11a3 3 0 11-6 0 3 3 0 016 0z" />
-							</svg>
-							<p className="mt-6 text-lg font-medium leading-relaxed text-gray-900">8502 Preston Rd. Ingle, Maine 98380, USA</p>
-						</div>
-					</div> */}
+					<div className="overflow-hidden flex justify-center md:flex-col gap-4 text-gray-500 font-thin">
+						<Link href='#' className="p-6 aspect-square bg-white rounded-xl">
+							<FaInstagram className='w-8 h-8' />
+						</Link>
+						<Link href='#' className="p-6 aspect-square bg-white rounded-xl">
+							<FaFacebookF className='w-8 h-8' />
+						</Link>
+					</div>
 				</div>
 
 				<div className="mt-6 overflow-hidden bg-white rounded-xl">

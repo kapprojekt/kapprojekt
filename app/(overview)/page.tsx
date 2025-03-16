@@ -3,6 +3,8 @@ import Image from "next/image";
 import bgImage from '@/src/logo_salon kuchnia .jpg'
 import { getMarkup } from "@/lib/utils";
 import { HomePageData } from "@/lib/types";
+import { FaFacebookF, FaInstagram } from "react-icons/fa";
+import Link from "next/link";
 
 export default function Home() {
 
@@ -48,6 +50,12 @@ export default function Home() {
             }
           </div>
         </header>
+        <article className="absolute w-full bottom-0 flex justify-center gap-3 mb-6 text-white">
+          <Link href='https://www.instagram.com/kap.projekt/' target="_blank" className="aspect-square bg-[rgb(243,239,233,0.2)] backdrop-blur-sm p-4 rounded-full
+           text-3xl"><FaInstagram /></Link>
+          <Link href='https://www.facebook.com/KAPProjekt/' target="_blank" className="aspect-square bg-[rgb(243,239,233,0.2)] backdrop-blur-sm p-4 rounded-full
+           text-3xl"><FaFacebookF /></Link>
+        </article>
       </section>
     </main>
   );
