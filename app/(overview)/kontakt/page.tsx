@@ -4,8 +4,9 @@
 import React, { useActionState, useEffect, useState} from 'react'
 import { FormState, sendMessage } from '@/lib/actions';
 import Button from '@/components/ui/button';
-import { FaFacebookF, FaInstagram } from 'react-icons/fa6';
+import { FaEnvelope, FaFacebookF, FaInstagram, FaPhone } from 'react-icons/fa6';
 import Link from 'next/link';
+import { Input } from '@/components/ui/input';
 
 const ContactPage = () => {
 	const [isLoading, setIsLoading] = useState(false);
@@ -36,14 +37,7 @@ const ContactPage = () => {
 				<div className="flex flex-col md:flex-row gap-6 px-8 text-center md:px-0">
 					<div className="overflow-hidden bg-white rounded-xl flex-1">
 						<div className="p-6">
-							<svg className="flex-shrink-0 w-10 h-10 mx-auto text-gray-400" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-								<path
-									strokeLinecap="round"
-									strokeLinejoin="round"
-									strokeWidth={1}
-									d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"
-								/>
-							</svg>
+							<FaPhone className="flex-shrink-0 w-8 h-8 mx-auto text-stone-500" />
 							<p className="mt-6 text-lg font-medium text-gray-900">+48 695 040 898 (Wrocław)</p>
 							<p className="mt-1 text-lg font-medium text-gray-900">+48 534 788 448 (Warszawa)</p>
 						</div>
@@ -51,14 +45,12 @@ const ContactPage = () => {
 
 					<div className="overflow-hidden bg-white rounded-xl flex-1">
 						<div className="p-6">
-							<svg className="flex-shrink-0 w-10 h-10 mx-auto text-gray-400" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-								<path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1} d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
-							</svg>
+							<FaEnvelope className="flex-shrink-0 w-8 h-8 mx-auto text-stone-500" />
 							<p className="mt-6 text-lg font-medium text-gray-900">kapprojektpolska@gmail.com</p>
 						</div>
 					</div>
 
-					<div className="overflow-hidden flex justify-center md:flex-col gap-4 text-gray-500 font-thin">
+					<div className="overflow-hidden flex justify-center md:flex-col gap-4 text-stone-500 font-thin">
 						<Link href='https://www.instagram.com/kap.projekt/' target="_blank" className="p-6 aspect-square bg-white rounded-xl duration-300 hover:bg-stone-500 hover:text-white hover:scale-95">
 							<FaInstagram className='w-8 h-8' />
 						</Link>
@@ -74,42 +66,9 @@ const ContactPage = () => {
 
 						<form action={formAction} onSubmit={onSubmitCallback} className="mt-14">
 							<div className="grid grid-cols-1 sm:grid-cols-2 gap-x-5 gap-y-4">
-								<div>
-									<label htmlFor="fullName" className="text-base font-medium text-gray-900">Imię i nazwisko</label>
-									<div className="mt-2.5 relative">
-										<input type="text" name="fullName" id="fullName" className="block w-full px-4 py-3 placeholder-gray-500 transition-all duration-200 bg-white border border-gray-200 rounded-md focus:outline-none focus:border-stone-400 caret-stone-400" />
-									</div>
-									{formState.errors?.fullName &&
-										formState.errors.fullName.map((error: string) => (
-											<p className="mt-2 text-sm text-red-500" key={error}>
-											{error}
-											</p>
-										))}
-								</div>
-								<div>
-									<label htmlFor="email" className="text-base font-medium text-gray-900">Email</label>
-									<div className="mt-2.5 relative">
-										<input type="email" name="email" id="email" className="block w-full px-4 py-3 placeholder-gray-500 transition-all duration-200 bg-white border border-gray-200 rounded-md focus:outline-none focus:border-stone-400 caret-stone-400" />
-									</div>
-									{formState.errors?.email &&
-										formState.errors.email.map((error: string) => (
-											<p className="mt-2 text-sm text-red-500" key={error}>
-											{error}
-											</p>
-										))}
-								</div>
-								<div>
-									<label htmlFor="localisation" className="text-base font-medium text-gray-900">Lokalizacja inwestycji</label>
-									<div className="mt-2.5 relative">
-										<input type="text" name="localisation" id="localisation" className="block w-full px-4 py-3 placeholder-gray-500 transition-all duration-200 bg-white border border-gray-200 rounded-md focus:outline-none focus:border-stone-400 caret-stone-400" />
-									</div>
-									{formState.errors?.localisation &&
-										formState.errors.localisation.map((error: string) => (
-											<p className="mt-2 text-sm text-red-500" key={error}>
-											{error}
-											</p>
-										))}
-								</div>
+								<Input fieldLabel='Imię i nazwisko' fieldName='fullName' fieldErrors={formState.errors?.fullName} />
+								<Input fieldLabel='Email' fieldName='email' fieldErrors={formState.errors?.email} />
+								<Input fieldLabel='Lokalizacja inwestycji' fieldName='localisation' fieldErrors={formState.errors?.localisation} />
 								<div>
 									<label htmlFor="investType" className="text-base font-medium text-gray-900">Rodzaj inwestycji</label>
 									<div className="mt-2.5 relative">

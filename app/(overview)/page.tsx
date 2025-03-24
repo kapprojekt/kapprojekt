@@ -50,12 +50,17 @@ export default function Home() {
             }
           </div>
         </header>
-        <article className="absolute w-full bottom-0 flex justify-center gap-3 mb-6 text-white">
-          <Link href='https://www.instagram.com/kap.projekt/' target="_blank" className="aspect-square bg-[rgb(243,239,233,0.2)] backdrop-blur-sm p-4 rounded-full
-           text-3xl hover:bg-stone-100 hover:text-stone-600 duration-300 hover:-translate-y-0.5 hover:shadow-lg"><FaInstagram /></Link>
-          <Link href='https://www.facebook.com/KAPProjekt/' target="_blank" className="aspect-square bg-[rgb(243,239,233,0.2)] backdrop-blur-sm p-4 rounded-full
-           text-3xl hover:bg-stone-100 hover:text-stone-600 duration-300 hover:-translate-y-0.5 hover:shadow-lg"><FaFacebookF /></Link>
-        </article>
+        {data.socialMedia &&
+          <article className="absolute w-full bottom-0 flex justify-center gap-3 mb-6 text-white">
+            {data.socialMedia.map(mediaLink => (
+              <Link key={mediaLink.url} href={mediaLink.url} target="_blank" className="aspect-square bg-[rgb(243,239,233,0.2)] backdrop-blur-sm p-4 rounded-full
+              text-3xl hover:bg-stone-100 hover:text-stone-600 duration-300 hover:-translate-y-0.5 hover:shadow-lg">
+                {mediaLink.type === 'ig' && <FaInstagram />}
+                {mediaLink.type === 'fb' && <FaFacebookF />}
+              </Link>
+            ))}
+          </article>
+        }
       </section>
     </main>
   );

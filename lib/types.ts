@@ -12,12 +12,16 @@ export interface PriceListInterface {
 export interface OfferInterface {
 	title: string;
 	description: string;
-	urls?: string[]
+	urls?: string[];
 	image?: string;
 }
 
 export interface HomePageData {
 	title: string;
 	tags: string[];
-	backgroundImage: string | StaticImageData
+	backgroundImage: string | StaticImageData;
+	socialMedia?: {
+		url: string;
+		type: 'fb' | 'ig';
+	}[]
 }
