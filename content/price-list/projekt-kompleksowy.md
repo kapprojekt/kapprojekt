@@ -2,7 +2,7 @@
 title: Projekt Kompleksowy
 description: 150 zł/m2
 type: basic
-image: /media/ed-3.jpg
+image: /media/edycja-b-salon-cam-3.jpg
 offer:
   - title: 2 PROPOZYCJE UKŁADU FUNKCJONALNEGO
     description: >-
