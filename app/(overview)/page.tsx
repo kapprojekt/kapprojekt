@@ -5,6 +5,7 @@ import { getMarkup } from "@/lib/utils";
 import { HomePageData } from "@/lib/types";
 import { FaFacebookF, FaInstagram } from "react-icons/fa";
 import Link from "next/link";
+import Faq from "@/components/faq";
 
 export default function Home() {
 
@@ -62,6 +63,7 @@ export default function Home() {
           </article>
         }
       </section>
+      <Faq />
     </main>
   );
 }
