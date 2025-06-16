@@ -4,7 +4,7 @@ import React from 'react'
 
 import Button from './ui/button'
 
-const PageUnderContruction = ({img}: {img: StaticImageData}) => {
+const PageUnderConstruction = ({img}: {img: StaticImageData}) => {
   return (
 	<main>
       <section className="relative z-0 h-screen w-full flex justify-center items-center">
@@ -34,4 +34,4 @@ const PageUnderContruction = ({img}: {img: StaticImageData}) => {
   )
 }
 
-export default PageUnderContruction
+export default PageUnderConstruction
