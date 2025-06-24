@@ -6,6 +6,7 @@ import React, { useEffect, useRef, useState } from "react";
 
 import logoImage from "@/src/logo-black.png";
 import { usePathname } from "next/navigation";
+import Button from "./ui/button";
 // import Button from './ui/button'
 
 const Navbar = () => {
@@ -69,11 +70,11 @@ const Navbar = () => {
           height={1000}
         />
       </Link>
-      <div className="hidden lg:block">
+      <div className="hidden lg:flex lg:items-center lg:justify-center lg:gap-2">
         {links.map((link) => (
           <Link
             key={link.label}
-            className={`inline-block px-10 py-2 border-y-2 border-transparent font-bold transition-all ${
+            className={`shrink-0 px-10 py-2 border-y-2 border-transparent font-bold transition-all ${
               pathname === link.href
                 ? `
 								hover:drop-shadow-none hover:transform-none border-b-stone-600`
@@ -85,6 +86,7 @@ const Navbar = () => {
             {link.label}
           </Link>
         ))}
+        <Button>Darmowa wycena</Button>
       </div>
       <div className="lg:hidden" ref={refMenu}>
         <button
