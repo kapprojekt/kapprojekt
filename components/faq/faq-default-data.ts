@@ -18,7 +18,7 @@ Posiadamy usługę Konsultacji Wnętrzarskiej, której koszt odejmowany jest od 
         buttons: [
           {
             label: "Darmowa wycena",
-            url: "/cennik",
+            url: "/kontakt",
           },
         ],
       },
@@ -41,7 +41,7 @@ Dla metrażu powyżej 12o m2, w zależności od skomplikowania projektu przewidu
         buttons: [
           {
             label: "Darmowa wycena",
-            url: "/cennik",
+            url: "/kontakt",
           },
           {
             label: "Zobacz ofertę",
@@ -92,7 +92,7 @@ Z założenia elementy nieruchome polecamy od razu kupować najlepsze, a ruchome
     title: `Jak długo trwa projekt i ile to kosztuje?`,
     sections: [
       {
-        text: `Projekt powstaje etapami, a więc Twoje płatności też są rozłożone na raty.
+        text: `Projekt powstaje etapami, <strong>a więc Twoje płatności</strong> też są rozłożone na raty.
 W zależności od pakietu projektowego czas wykonania się różni.
 
 Projekt Funkcjonalny - 3-4 tygodni
@@ -125,7 +125,7 @@ możesz skorzystać z Konsultacji Wnętrzarskiej. Koszt konsultacji odejmujemy o
         buttons: [
           {
             label: "Konsultacja wnętrzarska",
-            url: "/cennik",
+            url: "/cennik/konsultacja-wnetrzarska",
           },
         ],
       },

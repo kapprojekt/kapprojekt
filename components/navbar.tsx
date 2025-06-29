@@ -86,7 +86,13 @@ const Navbar = () => {
             {link.label}
           </Link>
         ))}
-        <Button>Darmowa wycena</Button>
+        <Link
+          className="px-4 py-3 text-base font-semibold transition-all duration-200 border-2
+                  border-stone-600 rounded-md hover:bg-stone-600 hover:text-white"
+          href="/kontakt"
+        >
+          Darmowa wycena
+        </Link>
       </div>
       <div className="lg:hidden" ref={refMenu}>
         <button
@@ -128,6 +134,13 @@ const Navbar = () => {
               {link.label}
             </Link>
           ))}
+          <Link
+            className="inline-block z-10 px-4 py-3 my-4 text-base font-semibold transition-all duration-200 border-2
+                  border-stone-600 rounded-md"
+            href="/kontakt"
+          >
+            Darmowa wycena
+          </Link>
         </div>
       </div>
     </nav>
