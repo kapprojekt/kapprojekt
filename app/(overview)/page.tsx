@@ -6,7 +6,6 @@ import { HomePageData } from "@/lib/types";
 import { FaFacebookF, FaInstagram } from "react-icons/fa";
 import Link from "next/link";
 import Faq from "@/components/faq/faq";
-import Contact from "@/components/contact/contact";
 
 export default function Home() {
   const defaultData: HomePageData = {

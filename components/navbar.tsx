@@ -6,8 +6,6 @@ import React, { useEffect, useRef, useState } from "react";
 
 import logoImage from "@/src/logo-black.png";
 import { usePathname } from "next/navigation";
-import Button from "./ui/button";
-// import Button from './ui/button'
 
 const Navbar = () => {
   const pathname = usePathname();
