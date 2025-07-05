@@ -46,7 +46,8 @@ faq:
               url: /kontakt
     - question: Czy mogę zgłosić się z projektem “na już”?
       sections:
-        - text: Jeśli zależy Ci na czasie, skontaktuj się z nami. W zależności od obecnej
+        - text:
+            Jeśli zależy Ci na czasie, skontaktuj się z nami. W zależności od obecnej
             dostępności, typu projektu i lokalizacji, ustalimy czy możliwe jest
             wykonanie projektu z szybkim terminem startu.
     - question: Czy jest minimalny lub maksymalny metraż projektowanej powierzchni?
@@ -62,12 +63,13 @@ faq:
               url: /kontakt
             - label: Zobacz ofertę
               url: /cennik
-    - question: Jaki jest koszt wykończenia mieszkania od stanu deweloperskiego w 2025
+    - question:
+        Jaki jest koszt wykończenia mieszkania od stanu deweloperskiego w 2025
         roku?
       sections:
         - text: >-
             W zależności od klasy wykończenia i lokalizacji cena wraz z
-            Wykonawstwem  (bez usługi projektowej) to koszt 
+            Wykonawstwem  (bez usługi projektowej) to koszt
 
 
             **2.000-3.000 zł - niska półka cenowa**
@@ -82,20 +84,20 @@ faq:
             * tańsze marki np. armatury łazienkowej lub korzystanie z promocji np. przy wyborze płytek
 
 
-            **3.000-4.200zł - średnia półka cenowa** 
+            **3.000-4.200zł - średnia półka cenowa**
 
 
             * możemy sobie pozwolić na wiele mebli na wymiar - nie zawsze wszystkie
 
             * standardowe rozwiązania - np. drzwi Porta, DRE, Pol-Skone z możliwością modyfikacji np. podwyższone, z lustrem
 
-            * lepsze materiały np. panele winylowe z dobrych marek, lepsza armatura łazienkowe, duży wybór płytek, część kamieni, konglomeratów i spieków na blaty zmieści się w budżecie (ale nie wszystkie) 
+            * lepsze materiały np. panele winylowe z dobrych marek, lepsza armatura łazienkowe, duży wybór płytek, część kamieni, konglomeratów i spieków na blaty zmieści się w budżecie (ale nie wszystkie)
 
 
-            **powyżej 4.200 zł** 
+            **powyżej 4.200 zł**
 
 
-            * możemy sobie pozwolić na meble na wymiar tam, gdzie chcemy 
+            * możemy sobie pozwolić na meble na wymiar tam, gdzie chcemy
 
             * możemy zastosować ciekawsze rozwiązania np. drzwi na wysokość pomieszczenia, płytki wielkoformatowe
 
@@ -104,7 +106,7 @@ faq:
             * designerskie detale - możemy zastosować droższe meble czy oświetlenie najwyższej jakości w tym modele od światowej klasy projektantów, które zachwycą każdego
 
 
-            W zależności do lokalizacji i skomplikowania projektu ceny Wykonawców mogą się różnić, co wpływa na finalną cenę wykończenia. Przyjmujemy średnią ceną **ok 800 zł/m2.** 
+            W zależności do lokalizacji i skomplikowania projektu ceny Wykonawców mogą się różnić, co wpływa na finalną cenę wykończenia. Przyjmujemy średnią ceną **ok 800 zł/m2.**
 
             We Wrocławiu, Lublinie i okolicach, ceny wahają się **od 650 zł do 850 zł/m2.**
 
@@ -114,9 +116,9 @@ faq:
             Na początku współpracy dobrze zdecydować się. chociaż na przybliżony budżet. Takie rozwiązanie sprawia, że projekt od początku powstaje z myślą o realnym sfinalizowaniu w takiej formie, jaką zobaczysz na rysunkach i wizualizacjach.
 
 
-            Możesz rozłożyć zakupy na etapy i dzięki temu podnieść budżet bez rezygnacji np. z wymarzonego parkietu drewnianego lub wysokiej klasy bateriach łazienkowych. 
+            Możesz rozłożyć zakupy na etapy i dzięki temu podnieść budżet bez rezygnacji np. z wymarzonego parkietu drewnianego lub wysokiej klasy bateriach łazienkowych.
 
-            Takie rozwiązanie zalecamy klientom, którzy planują wykończenie na lata, a nie mogą pozwolić sobie na wysoki standard od razu. 
+            Takie rozwiązanie zalecamy klientom, którzy planują wykończenie na lata, a nie mogą pozwolić sobie na wysoki standard od razu.
 
 
             Z założenia elementy nieruchome polecamy od razu kupować najlepsze, a ruchome meble - stoły, krzesła, kanapy, jeśli wykraczają poza budżet kupić tańsze z założeniem wymiany, zabrać z poprzedniego mieszkania lub kupić w kolejnej turze zakupów.
@@ -124,14 +126,14 @@ faq:
       sections:
         - text: >-
             Projekt powstaje etapami, a więc Twoje płatności też są rozłożone na
-            raty.  
+            raty.
 
             W zależności od pakietu projektowego czas wykonania się różni.
 
 
             Projekt Funkcjonalny - 3-4 tygodni
 
-            Projekt Kompleksowy - 2-3 miesięcy 
+            Projekt Kompleksowy - 2-3 miesięcy
 
             Projekt Wykonawczy - od 3 miesięcy
 
@@ -145,7 +147,7 @@ faq:
             - label: Zobacz ofertę
               url: /cennik
         - text: >-
-            Jeśli chcesz 
+            Jeśli chcesz
 
 
             * skonsultować możliwości zmiany w swoich mieszkaniu - kolory, dekoracje, układ pomieszczeń

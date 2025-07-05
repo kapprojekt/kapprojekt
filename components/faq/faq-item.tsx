@@ -5,6 +5,7 @@ import Link from "next/link";
 import React, { useState } from "react";
 import { FaChevronDown } from "react-icons/fa6";
 import Markdown from "react-markdown";
+import MarkdownAsync from "react-markdown";
 
 interface FaqItemProps {
   data: FaqItemData;
@@ -38,10 +39,12 @@ const FaqItem = ({ data }: FaqItemProps) => {
       >
         {sections.map((sectionData) => {
           return (
-            <article key={sectionData.text} className="whitespace-break-spaces">
-              <Markdown>{sectionData.text}</Markdown>
+            <article key={sectionData.text}>
+              <div className="prose">
+                <Markdown>{sectionData.text}</Markdown>
+              </div>
               {sectionData.buttons && (
-                <div className="flex flex-col sm:flex-row gap-3 mt-4">
+                <div className="flex flex-col sm:flex-row gap-3 my-4">
                   {sectionData.buttons.map((buttonData) => {
                     return (
                       <Link
