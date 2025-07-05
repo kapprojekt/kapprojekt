@@ -2,7 +2,7 @@ import { FaqItemData } from "@/lib/types";
 
 export const faqDefaultData: FaqItemData[] = [
   {
-    title: `Kiedy najlepiej zgłosić się do projektanta wnętrz?`,
+    question: `Kiedy najlepiej zgłosić się do projektanta wnętrz?`,
     sections: [
       {
         text: `Wielu Klientów zgłasza się do nas zaraz po zakupie nieruchomośći, jeszcze przed obiorem deweloperskim. To pozwala nam na stworzenie koncepcji, wizualizacji, projektu technicznego i złożenie zamówień tak, aby najszybciej jak to możliwe,  zacząc prace wykończeniowe.
@@ -25,7 +25,7 @@ Posiadamy usługę Konsultacji Wnętrzarskiej, której koszt odejmowany jest od 
     ],
   },
   {
-    title: `Czy mogę zgłosić się z projektem “na już”?`,
+    question: `Czy mogę zgłosić się z projektem “na już”?`,
     sections: [
       {
         text: `Jeśli zależy Ci na czasie, skontaktuj się z nami. W zależności od obecnej dostępności, typu projektu i lokalizacji, ustalimy czy możliwe jest wykonanie projektu z szybkim terminem startu.`,
@@ -33,7 +33,7 @@ Posiadamy usługę Konsultacji Wnętrzarskiej, której koszt odejmowany jest od 
     ],
   },
   {
-    title: `Czy jest minimalny lub maksymalny metraż projektowanej powierzchni?`,
+    question: `Czy jest minimalny lub maksymalny metraż projektowanej powierzchni?`,
     sections: [
       {
         text: `Nasz cennik obowiązuje dla powierzchni od 20 m2. Jeśli interesuje Cię mniejsza powierzchnia, skontaktuj się z nami, przygotujemy spersonalizowaną wycenę.
@@ -52,7 +52,7 @@ Dla metrażu powyżej 12o m2, w zależności od skomplikowania projektu przewidu
     ],
   },
   {
-    title: `Jaki jest koszt wykończenia mieszkania od stanu deweloperskiego w 2025 roku?`,
+    question: `Jaki jest koszt wykończenia mieszkania od stanu deweloperskiego w 2025 roku?`,
     sections: [
       {
         text: `W zależności od klasy wykońćzenia i lokalizacji cena wraz z Wykonastwem  (bez usługi projektowej) to koszt
@@ -89,7 +89,7 @@ Z założenia elementy nieruchome polecamy od razu kupować najlepsze, a ruchome
     ],
   },
   {
-    title: `Jak długo trwa projekt i ile to kosztuje?`,
+    question: `Jak długo trwa projekt i ile to kosztuje?`,
     sections: [
       {
         text: `Projekt powstaje etapami, <strong>a więc Twoje płatności</strong> też są rozłożone na raty.
