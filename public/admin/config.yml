@@ -21,13 +21,8 @@ collections:
         file: "content/pages/homepage.md"
         fields:
           - { label: "Tytuł", name: "title", widget: "string" }
-          - {
-              label: "Tagi",
-              name: "tags",
-              widget: "list",
-              summary: "{{fields.tag}}",
-              field: { label: "Tekst", name: "tag", widget: "string" },
-            }
+          - { label: "Podtytuł", name: "subtitle", widget: "text" }
+          - { label: "Długi tekst", name: "longtext", widget: "text" }
           - {
               label: "Tło",
               name: "backgroundImage",
@@ -39,23 +34,76 @@ collections:
               name: "socialMedia",
               widget: "list",
               required: false,
-              fields: [
-                {
-                  label: "Link",
-                  name: "url",
-                  widget: "string"
-                },
-                {
-                  label: "Rodzaj",
-                  name: "type",
-                  widget: "select",
-                  options: [
-                    { label: "Instagram", value: "ig"},
-                    { label: "Facebook", value: "fb"}
-                  ],
-                  default: "ig"
-                }
-              ]
+              fields:
+                [
+                  { label: "Link", name: "url", widget: "string" },
+                  {
+                    label: "Rodzaj",
+                    name: "type",
+                    widget: "select",
+                    options:
+                      [
+                        { label: "Instagram", value: "ig" },
+                        { label: "Facebook", value: "fb" },
+                      ],
+                    default: "ig",
+                  },
+                ],
+            }
+          - {
+              label: "FAQ",
+              name: "faq",
+              widget: "object",
+              fields:
+                [
+                  { label: "Tytuł", name: "title", widget: "string" },
+                  { label: "Podtytuł", name: "subtitle", widget: "string" },
+                  {
+                    label: "Pytania i odpowiedzi",
+                    name: "faqList",
+                    widget: "list",
+                    fields:
+                      [
+                        {
+                          label: "Treść pytania",
+                          name: "question",
+                          widget: "string",
+                        },
+                        {
+                          label: "Teksty i odnośniki",
+                          name: "sections",
+                          widget: "list",
+                          fields:
+                            [
+                              {
+                                label: "Tekst",
+                                name: "text",
+                                widget: "markdown",
+                              },
+                              {
+                                label: "Przyciski (odnośniki)",
+                                name: "buttons",
+                                widget: "list",
+                                required: false,
+                                fields:
+                                  [
+                                    {
+                                      label: "Tekst przycisku",
+                                      name: "label",
+                                      widget: "string",
+                                    },
+                                    {
+                                      label: "Odnośnik",
+                                      name: "url",
+                                      widget: "string",
+                                    },
+                                  ],
+                              },
+                            ],
+                        },
+                      ],
+                  },
+                ],
             }
 
       - label: "Kontakt"
@@ -132,8 +180,8 @@ collections:
         name: "type"
         widget: "select"
         options:
-          - {label: "Pakiety podstawowe", value: "basic" }
-          - {label: "Usługi dodatkowe", value: "additional"}
+          - { label: "Pakiety podstawowe", value: "basic" }
+          - { label: "Usługi dodatkowe", value: "additional" }
         default: "basic"
       - label: "Zdjęcie"
         name: "image"
@@ -162,4 +210,3 @@ collections:
             name: "image"
             widget: "image"
             required: false
-

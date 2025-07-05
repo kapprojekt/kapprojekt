@@ -10,11 +10,14 @@ import Faq from "@/components/faq/faq";
 export default function Home() {
   const defaultData: HomePageData = {
     title: "KAP Projekt",
-    tags: ["Projektowanie wnętrz", "Inspiracje", "Home staging"],
+    subtitle: "",
+    longtext: "",
     backgroundImage: bgImage,
   };
 
   const homepageMatter = getMarkup("content/pages", "homepage.md");
+
+  console.log(homepageMatter);
 
   let data: HomePageData;
 
@@ -44,7 +47,7 @@ export default function Home() {
           </h2>
           <p className="drop-shadow-[0_0_15px_black] sm:text-lg font-medium sm:w-2/3 md:w-1/2">
             Nasz zespół doświadczonych architektów zajmie się Twoim wnętrzem od
-            układu funckjonalnego aż po nadzór na budowie. Stworzymy miejsce w
+            układu funkcjonalnego aż po nadzór na budowie. Stworzymy miejsce w
             Twoim stylu, dopasowane do Ciebie. Bez stresu, tenimowo, od początku
             do końca.
           </p>
@@ -95,7 +98,7 @@ export default function Home() {
           </article>
         )}
       </section>
-      <Faq />
+      <Faq data={data.faq!} />
       {/* <Contact /> */}
     </main>
   );

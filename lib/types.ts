@@ -18,16 +18,23 @@ export interface OfferInterface {
 
 export interface HomePageData {
   title: string;
-  tags: string[];
+  subtitle: string;
+  longtext: string;
   backgroundImage: string | StaticImageData;
   socialMedia?: {
     url: string;
     type: "fb" | "ig";
   }[];
+  faq?: FaqData;
 }
 
-export interface FaqItemData {
+export interface FaqData {
   title: string;
+  subtitle: string;
+  faqList: FaqItemData[];
+}
+export interface FaqItemData {
+  question: string;
   sections: {
     text: string;
     buttons?: {

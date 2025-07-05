@@ -4,13 +4,14 @@ import { FaqItemData } from "@/lib/types";
 import Link from "next/link";
 import React, { useState } from "react";
 import { FaChevronDown } from "react-icons/fa6";
+import Markdown from "react-markdown";
 
 interface FaqItemProps {
   data: FaqItemData;
 }
 
 const FaqItem = ({ data }: FaqItemProps) => {
-  const { title, sections } = data;
+  const { question, sections } = data;
 
   const [itemOpen, setItemOpen] = useState(false);
 
@@ -21,7 +22,7 @@ const FaqItem = ({ data }: FaqItemProps) => {
         className="flex cursor-pointer items-center justify-between text-left gap-2 w-full px-4 py-5 sm:p-6"
         onClick={() => setItemOpen(!itemOpen)}
       >
-        <span className="text-lg font-semibold text-black">{title}</span>
+        <span className="text-lg font-semibold text-black">{question}</span>
 
         <FaChevronDown
           className={`shrink-0 duration-300 ${
@@ -38,7 +39,7 @@ const FaqItem = ({ data }: FaqItemProps) => {
         {sections.map((sectionData) => {
           return (
             <article key={sectionData.text}>
-              <p className="whitespace-break-spaces mt-4">{sectionData.text}</p>
+              <Markdown>{sectionData.text}</Markdown>
               {sectionData.buttons && (
                 <div className="flex flex-col sm:flex-row gap-3 mt-4">
                   {sectionData.buttons.map((buttonData) => {
