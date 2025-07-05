@@ -5,7 +5,6 @@ import Link from "next/link";
 import React, { useState } from "react";
 import { FaChevronDown } from "react-icons/fa6";
 import Markdown from "react-markdown";
-import MarkdownAsync from "react-markdown";
 
 interface FaqItemProps {
   data: FaqItemData;
