@@ -46,8 +46,7 @@ faq:
               url: /kontakt
     - question: Czy mogę zgłosić się z projektem “na już”?
       sections:
-        - text:
-            Jeśli zależy Ci na czasie, skontaktuj się z nami. W zależności od obecnej
+        - text: Jeśli zależy Ci na czasie, skontaktuj się z nami. W zależności od obecnej
             dostępności, typu projektu i lokalizacji, ustalimy czy możliwe jest
             wykonanie projektu z szybkim terminem startu.
     - question: Czy jest minimalny lub maksymalny metraż projektowanej powierzchni?
@@ -63,8 +62,7 @@ faq:
               url: /kontakt
             - label: Zobacz ofertę
               url: /cennik
-    - question:
-        Jaki jest koszt wykończenia mieszkania od stanu deweloperskiego w 2025
+    - question: Jaki jest koszt wykończenia mieszkania od stanu deweloperskiego w 2025
         roku?
       sections:
         - text: >-
@@ -73,7 +71,6 @@ faq:
 
 
             **2.000-3.000 zł - niska półka cenowa**
-
 
             * niewielka liczbą mebli na wymiar lub tylko gotowe meble
 
@@ -86,7 +83,6 @@ faq:
 
             **3.000-4.200zł - średnia półka cenowa**
 
-
             * możemy sobie pozwolić na wiele mebli na wymiar - nie zawsze wszystkie
 
             * standardowe rozwiązania - np. drzwi Porta, DRE, Pol-Skone z możliwością modyfikacji np. podwyższone, z lustrem
@@ -95,7 +91,6 @@ faq:
 
 
             **powyżej 4.200 zł**
-
 
             * możemy sobie pozwolić na meble na wymiar tam, gdzie chcemy
 
@@ -149,13 +144,11 @@ faq:
         - text: >-
             Jeśli chcesz
 
-
             * skonsultować możliwości zmiany w swoich mieszkaniu - kolory, dekoracje, układ pomieszczeń
 
             * uzyskać pomoc w decyzji o zakupie nieruchomości - zbadać potencjał mieszkania oferowanego na sprzedaż
 
             * skonsultować możliwości techniczne zmiany, którą planujesz w swoim mieszkaniu od dewelopera
-
 
             możesz skorzystać z **Konsultacji Wnętrzarskiej**. Koszt konsultacji odejmujemy od ceny projektu, jeśli zdecydujesz się na dalszą współpracę korzystając z naszych Pakietów.
           buttons:
