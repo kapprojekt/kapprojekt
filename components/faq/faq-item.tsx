@@ -38,7 +38,7 @@ const FaqItem = ({ data }: FaqItemProps) => {
       >
         {sections.map((sectionData) => {
           return (
-            <article key={sectionData.text}>
+            <article key={sectionData.text} className="whitespace-break-spaces">
               <Markdown>{sectionData.text}</Markdown>
               {sectionData.buttons && (
                 <div className="flex flex-col sm:flex-row gap-3 mt-4">

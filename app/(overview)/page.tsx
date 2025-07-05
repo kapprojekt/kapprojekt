@@ -17,8 +17,6 @@ export default function Home() {
 
   const homepageMatter = getMarkup("content/pages", "homepage.md");
 
-  console.log(homepageMatter);
-
   let data: HomePageData;
 
   if (!homepageMatter) {
