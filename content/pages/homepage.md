@@ -21,16 +21,27 @@ faq:
     - question: Kiedy najlepiej zgłosić się do projektanta wnętrz?
       sections:
         - text: >-
+            Wielu Klientów zgłasza się do nas zaraz po zakupie nieruchomości,
+            jeszcze przed obiorem deweloperskim. To pozwala nam na stworzenie
+            koncepcji, wizualizacji, projektu technicznego i złożenie zamówień
+            tak, aby najszybciej jak to możliwe, zacząć prace wykończeniowe.
 
-            Wielu Klientów zgłasza się do nas zaraz po zakupie nieruchomośći, jeszcze przed obiorem deweloperskim. To pozwala nam na stworzenie koncepcji, wizualizacji, projektu technicznego i złożenie zamówień tak, aby najszybciej jak to możliwe,  zacząc prace wykończeniowe.
 
 
-            Jeśli zgłosisz się od razu po zakupie, być może będziemy mieć możliwość wprowadzenia zmian lokarskiech (w przypadku inwestycji deweloperskich), co znacznie przyspieszy pracę ekipie wykończeniowej i jest korzystne finansowo.
+            Jeśli zgłosisz się od razu po zakupie, być może będziemy mieć możliwość wprowadzenia zmian lokatorskich (w przypadku inwestycji deweloperskich), co znacznie przyspieszy pracę ekipie wykończeniowej i jest korzystne finansowo.
 
-            Naszym Klientom **polecamy ekipy wykończeniowe, stolarzy,** szklarzy i sklepy z wyposażeniem wnętrz. Skorzystanie z naszego polecania nie jest oczywiście obligatoryjne.
+
+
+            Naszym Klientom polecamy ekipy wykończeniowe, stolarzy, szklarzy i sklepy z wyposażeniem wnętrz. Skorzystanie z naszego polecania nie jest oczywiście obligatoryjne.
+
+
 
             Jeśli posiadasz swoich Wykonawców, poinformuj nas o ustalonym terminie.Zalecamy ustalenie harmonogramu prac projektowych przed zarezerwowaniem ternimu u Wykonawców.
 
 
-            Posiadamy usługę **Konsultacji** Wnętrzarskiej, której koszt odejmowany jest od Projektu, przy nawiązaniu współpracy. Z takiej konsultacji możesz skorzystać jeszcze przed zakupem. Wspólnie przeanalizujemy potencjał mieszkań czy domów, które oglądasz, stworzymy wstępny układ funkcjonalny i sprawdzimy istotne kwestie techniczne
+
+            Posiadamy usługę **Konsultacji Wnętrzarskiej**, której koszt odejmowany jest od Projektu, przy nawiązaniu współpracy. Z takiej konsultacji możesz skorzystać jeszcze przed zakupem. Wspólnie przeanalizujemy potencjał mieszkań czy domów, które oglądasz, stworzymy wstępny układ funkcjonalny i sprawdzimy istotne kwestie techniczne.
+          buttons:
+            - label: Darmowa wycena
+              url: /kontakt
 ---
