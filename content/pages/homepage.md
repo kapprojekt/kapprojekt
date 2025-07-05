@@ -70,7 +70,7 @@ faq:
             Wykonawstwem  (bez usługi projektowej) to koszt
 
 
-            **2.000-3.000 zł - niska półka cenowa**
+            **2.000-3.000 zł - niska półka cenowa**/
 
             * niewielka liczbą mebli na wymiar lub tylko gotowe meble
 
@@ -81,7 +81,7 @@ faq:
             * tańsze marki np. armatury łazienkowej lub korzystanie z promocji np. przy wyborze płytek
 
 
-            **3.000-4.200zł - średnia półka cenowa**
+            **3.000-4.200zł - średnia półka cenowa**/
 
             * możemy sobie pozwolić na wiele mebli na wymiar - nie zawsze wszystkie
 
@@ -90,7 +90,7 @@ faq:
             * lepsze materiały np. panele winylowe z dobrych marek, lepsza armatura łazienkowe, duży wybór płytek, część kamieni, konglomeratów i spieków na blaty zmieści się w budżecie (ale nie wszystkie)
 
 
-            **powyżej 4.200 zł**
+            **powyżej 4.200 zł**/
 
             * możemy sobie pozwolić na meble na wymiar tam, gdzie chcemy
 
@@ -144,13 +144,13 @@ faq:
         - text: >-
             Jeśli chcesz
 
+
             * skonsultować możliwości zmiany w swoich mieszkaniu - kolory, dekoracje, układ pomieszczeń
 
             * uzyskać pomoc w decyzji o zakupie nieruchomości - zbadać potencjał mieszkania oferowanego na sprzedaż
 
-            * skonsultować możliwości techniczne zmiany, którą planujesz w swoim mieszkaniu od dewelopera
-
-            możesz skorzystać z **Konsultacji Wnętrzarskiej**. Koszt konsultacji odejmujemy od ceny projektu, jeśli zdecydujesz się na dalszą współpracę korzystając z naszych Pakietów.
+            * skonsultować możliwości techniczne zmiany, którą planujesz w swoim mieszkaniu od dewelopera\
+              możesz skorzystać z **Konsultacji Wnętrzarskiej**. Koszt konsultacji odejmujemy od ceny projektu, jeśli zdecydujesz się na dalszą współpracę korzystając z naszych Pakietów.
           buttons:
             - label: Konsultacja Wnętrzarska
               url: /cennik/konsultacja-wnetrzarska
