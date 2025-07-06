@@ -154,7 +154,11 @@ collections:
         widget: "string"
         required: false
       - label: "Typ projektu"
-        name: "project_type"
+        name: "projectType"
+        widget: "string"
+        required: false
+      - label: "Instagram"
+        name: "instaLink"
         widget: "string"
         required: false
       - label: "Zdjęcia"
@@ -162,7 +166,9 @@ collections:
         widget: "list"
         required: true
         summary: "{{fields.image}}"
-        field: { label: "Obraz", name: "image", widget: "image" }
+        fields:
+          - { label: "Obraz", name: "image", widget: "image" }
+          - { label: "Krótki opis", name: "alt", widget: "string" }
 
   - label: "Cenniki"
     name: "price-lists"

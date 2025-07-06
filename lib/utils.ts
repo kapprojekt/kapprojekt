@@ -12,7 +12,7 @@ export const getFolderMarkups = (
     return files.map((filename) => {
       const filePath = path.join(directoryPath, filename);
       const data = matter.read(filePath);
-      data.data['slug'] = filename.split('.')[0]
+      data.data["slug"] = filename.split(".")[0];
       return data;
     });
   } catch {

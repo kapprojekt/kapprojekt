@@ -43,3 +43,19 @@ export interface FaqItemData {
     }[];
   }[];
 }
+
+export interface ProjectData {
+  slug: string;
+  title: string;
+  description: string;
+  location?: string;
+  date?: string;
+  projectType?: string;
+  instaLink?: string;
+  images: ProjectImageData[];
+}
+
+export interface ProjectImageData {
+  image: string;
+  alt: string;
+}
