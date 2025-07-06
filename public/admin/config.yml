@@ -169,6 +169,8 @@ collections:
         fields:
           - { label: "Obraz", name: "image", widget: "image" }
           - { label: "Krótki opis", name: "alt", widget: "string" }
+          - { label: "Wysokość zdjęcia", name: "height", widget: "number" }
+          - { label: "Szerokość zdjęcia", name: "width", widget: "number" }
 
   - label: "Cenniki"
     name: "price-lists"
