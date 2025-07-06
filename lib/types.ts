@@ -58,4 +58,6 @@ export interface ProjectData {
 export interface ProjectImageData {
   image: string;
   alt: string;
+  width: number;
+  height: number;
 }

@@ -8,7 +8,7 @@ interface GalleryProps {
 
 const Gallery = ({ images }: GalleryProps) => {
   return (
-    <section className="px-2 my-3 grid gap-2 grid-cols-[repeat(auto-fit,_minmax(250px,_1fr))] auto-rows-[10px]">
+    <section className="px-1 my-3 grid grid-cols-[repeat(auto-fit,_minmax(250px,_1fr))] auto-rows-[10px]">
       {images.map((imageItem) => (
         <GalleryItem key={imageItem.alt} imageItem={imageItem} />
       ))}
