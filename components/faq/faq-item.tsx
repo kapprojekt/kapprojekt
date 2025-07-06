@@ -39,7 +39,7 @@ const FaqItem = ({ data }: FaqItemProps) => {
         {sections.map((sectionData) => {
           return (
             <article key={sectionData.text}>
-              <div className="prose">
+              <div className="prose max-w-none">
                 <Markdown>{sectionData.text}</Markdown>
               </div>
               {sectionData.buttons && (
