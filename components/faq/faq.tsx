@@ -23,8 +23,6 @@ const Faq = ({ data }: { data: FaqData }) => {
             <FaqItem key={`${faqDataItem.question}`} data={faqDataItem} />
           ))}
         </div>
-
-        {/* <p className="text-center text-gray-600 textbase mt-9">Didn’t find the answer you are looking for? <a href="#" title="" className="font-medium text-blue-600 transition-all duration-200 hover:text-blue-700 focus:text-blue-700 hover:underline">Contact our support</a></p> */}
       </div>
     </section>
   );

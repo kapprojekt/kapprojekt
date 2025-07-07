@@ -46,7 +46,8 @@ faq:
               url: /kontakt
     - question: Czy mogę zgłosić się z projektem “na już”?
       sections:
-        - text: Jeśli zależy Ci na czasie, skontaktuj się z nami. W zależności od obecnej
+        - text:
+            Jeśli zależy Ci na czasie, skontaktuj się z nami. W zależności od obecnej
             dostępności, typu projektu i lokalizacji, ustalimy czy możliwe jest
             wykonanie projektu z szybkim terminem startu.
     - question: Czy jest minimalny lub maksymalny metraż projektowanej powierzchni?
@@ -62,7 +63,8 @@ faq:
               url: /kontakt
             - label: Zobacz ofertę
               url: /cennik
-    - question: Jaki jest koszt wykończenia mieszkania od stanu deweloperskiego w 2025
+    - question:
+        Jaki jest koszt wykończenia mieszkania od stanu deweloperskiego w 2025
         roku?
       sections:
         - text: >-
@@ -104,9 +106,9 @@ faq:
             * designerskie detale - możemy zastosować droższe meble czy oświetlenie najwyższej jakości w tym modele od światowej klasy projektantów, które zachwycą każdego
 
 
-            W zależności do lokalizacji i skomplikowania projektu ceny Wykonawców mogą się różnić, co wpływa na finalną cenę wykończenia. Przyjmujemy średnią ceną **ok 800 zł/m2.**\n
+            W zależności do lokalizacji i skomplikowania projektu ceny Wykonawców mogą się różnić, co wpływa na finalną cenę wykończenia. Przyjmujemy średnią ceną **ok 800 zł/m2.**\
 
-            We Wrocławiu, Lublinie i okolicach, ceny wahają się **od 650 zł do 850 zł/m2.**\n
+            We Wrocławiu, Lublinie i okolicach, ceny wahają się **od 650 zł do 850 zł/m2.**\
 
             W Warszawie ceny mogą dochodzić **do 1100 zł/m2.**
 

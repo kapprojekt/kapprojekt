@@ -1,11 +1,12 @@
 import Image from "next/image";
 
 import bgImage from "@/src/logo_salon kuchnia .jpg";
-import { getMarkup } from "@/lib/utils";
-import { HomePageData } from "@/lib/types";
+import { getFolderMarkups, getMarkup } from "@/lib/utils";
+import { HomePageData, ProjectData } from "@/lib/types";
 import { FaFacebookF, FaInstagram } from "react-icons/fa";
 import Link from "next/link";
 import Faq from "@/components/faq/faq";
+import ProjectCarousel from "@/components/project/project-carousel";
 
 export default function Home() {
   const defaultData: HomePageData = {
@@ -25,9 +26,21 @@ export default function Home() {
 
   data = homepageMatter?.data as HomePageData;
 
+  const projects = getFolderMarkups("content/projects");
+
+  if (!projects) {
+    return (
+      <p className="py-32 text-4xl text-center">
+        Wystąpił błąd w czasie pobierania danych!
+      </p>
+    );
+  }
+
+  const projectsData = projects.map((project) => project.data) as ProjectData[];
+
   return (
     <main>
-      <section className="z-10 h-screen w-full relative">
+      <section className="z-10 min-h-max h-screen w-full relative">
         <Image
           className="-z-10 absolute w-full h-full object-cover"
           src={data.backgroundImage}
@@ -37,13 +50,13 @@ export default function Home() {
         />
 
         <header className="px-8 text-white text-center sm:text-left bg-[rgba(0,0,0,0.4)] w-full h-full flex flex-col justify-center items-center sm:items-baseline">
-          <h1 className="text-5xl sm:text-6xl md:text-7xl font-semibold drop-shadow-[0_0_10px_black]">
+          <h1 className="text-4xl sm:text-6xl md:text-7xl font-semibold drop-shadow-[0_0_10px_black]">
             {data.title}
           </h1>
-          <h2 className="mb-8 mt-2 text-2xl sm:text-3xl md:text-4xl font-semibold drop-shadow-[0_0_10px_black] sm:w-4/5 md:w-2/3 lg:w-1/2">
+          <h2 className="mb-8 mt-2 text-xl sm:text-3xl md:text-4xl font-semibold drop-shadow-[0_0_10px_black] sm:w-4/5 md:w-2/3 lg:w-1/2">
             Kompleksowo zaprojektujemy Twoje wnętrze
           </h2>
-          <p className="drop-shadow-[0_0_15px_black] sm:text-lg font-medium sm:w-2/3 md:w-1/2">
+          <p className="drop-shadow-[0_0_15px_black] text-sm sm:text-lg font-medium sm:w-2/3 md:w-1/2">
             Nasz zespół doświadczonych architektów zajmie się Twoim wnętrzem od
             układu funkcjonalnego aż po nadzór na budowie. Stworzymy miejsce w
             Twoim stylu, dopasowane do Ciebie. Bez stresu, tenimowo, od początku
@@ -96,8 +109,8 @@ export default function Home() {
           </article>
         )}
       </section>
+      <ProjectCarousel projectsData={projectsData} />
       <Faq data={data.faq!} />
-      {/* <Contact /> */}
     </main>
   );
 }

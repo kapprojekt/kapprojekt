@@ -17,3 +17,19 @@ body {
   color: var(--foreground);
   background: var(--background);
 }
+
+.swiper {
+  height: 100%;
+  width: 100%;
+}
+
+.swiper .swiper-pagination-bullet-active {
+  background-color: black;
+  transform: scale(2);
+  transform-origin: center;
+}
+
+.swiper-button-prev::after,
+.swiper-button-next::after {
+  color: black;
+}

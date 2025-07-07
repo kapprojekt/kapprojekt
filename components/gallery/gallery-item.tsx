@@ -12,10 +12,7 @@ const GalleryItem = ({ imageItem }: GalleryItemProps) => {
   const imageSpans = Math.ceil(galleryHeight / 10) + 1;
 
   return (
-    <div
-      className="w-[250px] justify-self-center"
-      style={{ gridRow: `span ${imageSpans}` }}
-    >
+    <div className="w-[250px]" style={{ gridRow: `span ${imageSpans}` }}>
       <div className="rounded-md overflow-hidden group">
         <Image
           src={imageItem.image}

@@ -8,9 +8,9 @@ interface GalleryProps {
 
 const Gallery = ({ images }: GalleryProps) => {
   return (
-    <section className="px-1 my-3 grid grid-cols-[repeat(auto-fit,_minmax(250px,_1fr))] auto-rows-[10px]">
+    <section className="my-3 grid grid-cols-[repeat(auto-fill,_250px)] gap-x-4 auto-rows-[10px] justify-center">
       {images.map((imageItem) => (
-        <GalleryItem key={imageItem.alt} imageItem={imageItem} />
+        <GalleryItem key={imageItem.image} imageItem={imageItem} />
       ))}
     </section>
   );
