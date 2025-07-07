@@ -14,12 +14,12 @@ images:
     alt: grodzisk 2
     width: 1200
     height: 1200
-  - image: /media/3.jpg
-    alt: grodzisk 3
-    width: 1200
-    height: 1200
   - image: /media/1.jpg
     alt: grodzisk 1
+    width: 1200
+    height: 1200
+  - image: /media/3.jpg
+    alt: grodzisk 3
     width: 1200
     height: 1200
 ---
