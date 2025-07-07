@@ -10,18 +10,30 @@ description: >-
 location: Wrocław
 date: "2024"
 images:
-  - image: /media/hol_1.jpg
-    alt: hol 1
-    width: 780
-    height: 1300
-  - image: /media/hol_2.jpg
-    alt: hol 2
-    width: 780
-    height: 1300
+  - image: /media/salon-c2.jpg
+    alt: salon 2
+    width: 1280
+    height: 720
   - image: /media/salon-c1.jpg
     alt: salon 1
     width: 1280
     height: 720
+  - image: /media/salon-c3.jpg
+    alt: salon 3
+    width: 1280
+    height: 720
+  - image: /media/salon-c4.jpg
+    alt: salon 4
+    width: 1280
+    height: 720
+  - image: /media/dymione-szklo-salon-c5.jpg
+    alt: salon 5
+    width: 880
+    height: 1100
+  - image: /media/hol_1.jpg
+    alt: hol 1
+    width: 780
+    height: 1300
   - image: /media/korytarz.jpg
     alt: korytarz
     width: 780
@@ -34,22 +46,14 @@ images:
     alt: łazienka 2
     width: 1000
     height: 1300
-  - image: /media/salon-c2.jpg
-    alt: salon 2
-    width: 1280
-    height: 720
-  - image: /media/salon-c4.jpg
-    alt: salon 4
-    width: 1280
-    height: 720
-  - image: /media/salon-c3.jpg
-    alt: salon 3
-    width: 1280
-    height: 720
-  - image: /media/dymione-szklo-salon-c5.jpg
-    alt: salon 5
-    width: 880
-    height: 1100
+  - image: /media/sypialnia-1.jpg
+    alt: sypialnia 1
+    width: 1200
+    height: 900
+  - alt: sypialnia 2
+    image: /media/sypialnia-2.jpg
+    width: 1200
+    height: 900
   - image: /media/ed-lazienka_gora_1.jpg
     alt: łazienka góra 1
     width: 1000
@@ -62,12 +66,4 @@ images:
     alt: łazienka góra 3
     width: 1000
     height: 1300
-  - image: /media/sypialnia-1.jpg
-    alt: sypialnia 1
-    width: 1200
-    height: 900
-  - alt: sypialnia 2
-    image: /media/sypialnia-2.jpg
-    width: 1200
-    height: 900
 ---
