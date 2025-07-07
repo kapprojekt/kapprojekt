@@ -5,7 +5,7 @@
   "scripts": {
     "dev": "next dev",
     "build": "next build",
-    "clean-build": "pnpm cache delete && pnpm build && rm -rf .next",
+    "clean-build": "pnpm cache delete && pnpm build && rm -rf .next/cache",
     "start": "next start",
     "lint": "next lint"
   },
