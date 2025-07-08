@@ -1,25 +1,55 @@
+"use client";
+
 import { ProjectImageData } from "@/lib/types";
 import Image from "next/image";
-import React from "react";
+import React, { useEffect, useRef, useState } from "react";
 
 interface GalleryItemProps {
   imageItem: ProjectImageData;
 }
 
 const GalleryItem = ({ imageItem }: GalleryItemProps) => {
+  const divRef = useRef(null) as React.RefObject<HTMLDivElement | null>;
+  const [galleryWidth, setGalleryWidth] = useState(0);
+
+  useEffect(() => {
+    if (divRef.current) {
+      setGalleryWidth(divRef.current.offsetWidth);
+    }
+    const handleResize = () => {
+      if (divRef.current) {
+        setGalleryWidth(divRef.current.offsetWidth);
+      }
+      // const currentW = window.innerWidth;
+      // if (currentW) {
+      //   setGalleryWidth(currentW);
+      // }
+      // console.log(galleryWidth);
+    };
+
+    window.addEventListener("resize", handleResize);
+
+    return () => {
+      window.removeEventListener("resize", handleResize);
+    };
+  });
+
   const widthHeightRatio = imageItem.height / imageItem.width;
-  const galleryHeight = Math.ceil(250 * widthHeightRatio);
+  const galleryHeight = Math.ceil(galleryWidth * widthHeightRatio);
   const imageSpans = Math.ceil(galleryHeight / 10) + 1;
 
   return (
-    <div className="w-[250px]" style={{ gridRow: `span ${imageSpans}` }}>
+    <div
+      ref={divRef}
+      className="w-full"
+      style={{ gridRow: `span ${imageSpans}` }}
+    >
       <div className="rounded-md overflow-hidden group">
         <Image
           src={imageItem.image}
           alt={imageItem.alt}
-          width={250}
+          width={galleryWidth}
           height={galleryHeight}
-          sizes="250px"
           className="group-hover:opacity-75"
         />
       </div>

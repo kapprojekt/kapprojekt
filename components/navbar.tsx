@@ -16,11 +16,11 @@ const Navbar = () => {
 
   const links = [
     {
-      href: "/",
+      href: "/#home",
       label: "Home",
     },
     {
-      href: "/o-nas",
+      href: "/#about",
       label: "O nas",
     },
     {
@@ -126,6 +126,7 @@ const Navbar = () => {
           {links.map((link) => (
             <Link
               key={link.label}
+              onClick={() => setIsOpen(false)}
               className="inline-block px-10 my-4 font-semibold drop-shadow-lg"
               href={link.href}
             >
@@ -133,6 +134,7 @@ const Navbar = () => {
             </Link>
           ))}
           <Link
+            onClick={() => setIsOpen(false)}
             className="inline-block z-10 px-4 py-3 my-4 text-base font-semibold transition-all duration-200 border-2
                   border-stone-600 rounded-md"
             href="/kontakt"

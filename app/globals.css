@@ -4,6 +4,7 @@
 :root {
   --background: rgb(243, 239, 233);
   --foreground: #171717;
+  scroll-behavior: smooth;
 }
 
 /* @media (prefers-color-scheme: dark) {

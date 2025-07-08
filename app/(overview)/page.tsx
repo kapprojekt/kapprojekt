@@ -7,6 +7,8 @@ import { FaFacebookF, FaInstagram } from "react-icons/fa";
 import Link from "next/link";
 import Faq from "@/components/faq/faq";
 import ProjectCarousel from "@/components/project/project-carousel";
+import MainTiles from "@/components/main-tiles/main-tiles";
+import About from "@/components/about/about";
 
 export default function Home() {
   const defaultData: HomePageData = {
@@ -39,7 +41,7 @@ export default function Home() {
   const projectsData = projects.map((project) => project.data) as ProjectData[];
 
   return (
-    <main>
+    <main id="home">
       <section className="z-10 min-h-max h-screen w-full relative">
         <Image
           className="-z-10 absolute w-full h-full object-cover"
@@ -109,8 +111,10 @@ export default function Home() {
           </article>
         )}
       </section>
+      <MainTiles />
       <ProjectCarousel projectsData={projectsData} />
       <Faq data={data.faq!} />
+      <About />
     </main>
   );
 }

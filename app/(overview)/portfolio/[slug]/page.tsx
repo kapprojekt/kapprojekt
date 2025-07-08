@@ -24,14 +24,14 @@ const PortfolioItemPage = async ({ params }: PortfolioItemPageProps) => {
   const data = project.data as ProjectData;
   return (
     <section className="py-24 mx-auto bg-[rgb(243,239,233)] px-4 sm:px-6 lg:px-8">
-      <header className="mx-auto max-w-4xl mb-16">
-        <h1 className="text-3xl my-6 font-bold leading-tight text-center text-black sm:text-4xl lg:text-5xl">
+      <header className="max-w-4xl mb-16">
+        <h1 className="text-xl my-6 font-bold leading-tight text-black sm:text-2xl lg:text-3xl">
           {data.title}
         </h1>
         <p className="my-12 leading-relaxed text-justify text-gray-600 sm:text-lg lg:text-xl">
           {data.description}
         </p>
-        <div className="flex flex-col max-w-80 sm:max-w-full sm:flex-row gap-2 justify-center mx-auto">
+        <div className="flex flex-wrap gap-2">
           {data.location && (
             <ProjectInfoTile>
               <FaLocationPin />
@@ -52,7 +52,7 @@ const PortfolioItemPage = async ({ params }: PortfolioItemPageProps) => {
           )}
         </div>
       </header>
-      <main className="mx-auto">
+      <main>
         <Gallery images={data.images} />
       </main>
     </section>
