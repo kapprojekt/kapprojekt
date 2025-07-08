@@ -28,14 +28,14 @@ const ProjectCarousel = ({ projectsData }: ProjectCarouselProps) => {
       </p>
       <Swiper
         slidesPerView={"auto"}
-        spaceBetween={50}
         navigation
+        spaceBetween={50}
         pagination={{ clickable: true }}
         modules={[Pagination, Navigation]}
-        className="mb-6"
+        className="mb-6 w-full"
       >
         {projectsData.map((project) => (
-          <SwiperSlide key={project.slug} className="w-full max-w-xs">
+          <SwiperSlide key={project.slug} className="w-full sm:max-w-xs">
             <ProjectCarouselItem project={project} />
           </SwiperSlide>
         ))}

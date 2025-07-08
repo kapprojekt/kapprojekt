@@ -31,7 +31,7 @@ const TestimonialCarousel = ({ testimonialData }: TestimonialCarouselProps) => {
         {testimonialData.testimonialList.map((testimonial) => (
           <SwiperSlide
             key={testimonial.testimonialText}
-            className="w-full max-w-xs my-16"
+            className="w-full sm:max-w-xs my-16"
           >
             <TestimonialCarouselItem testimonial={testimonial} />
           </SwiperSlide>

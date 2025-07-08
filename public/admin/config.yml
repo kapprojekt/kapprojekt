@@ -166,6 +166,17 @@ collections:
     folder: "content/projects"
     create: true
     fields:
+      - label: "Kolejność"
+        name: "order"
+        widget: "number"
+        default: 1
+        value_type: "int"
+        min: 1
+        step: 1
+      - label: "Strona główna"
+        name: "isOnHomepage"
+        widget: "boolean"
+        default: false
       - label: "Tytuł"
         name: "title"
         widget: "string"
