@@ -2,7 +2,6 @@ import React from "react";
 import Link from "next/link";
 import { ProjectData } from "@/lib/types";
 import Image from "next/image";
-import { FaArrowUpRightFromSquare } from "react-icons/fa6";
 
 const ProjectTile = ({ project }: { project: ProjectData }) => {
   return (

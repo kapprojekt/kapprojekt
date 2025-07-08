@@ -32,7 +32,7 @@ const GalleryItem = ({ imageItem }: GalleryItemProps) => {
     return () => {
       window.removeEventListener("resize", handleResize);
     };
-  });
+  }, []);
 
   const widthHeightRatio = imageItem.height / imageItem.width;
   const galleryHeight = Math.ceil(galleryWidth * widthHeightRatio);

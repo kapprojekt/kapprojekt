@@ -1,7 +1,7 @@
 import React from "react";
 
 const TestimonialCarouselItem = () => {
-  return <div>TestimonialCarouselItem</div>;
+  return <div>cdn</div>;
 };
 
 export default TestimonialCarouselItem;
