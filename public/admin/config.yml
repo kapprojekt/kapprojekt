@@ -105,6 +105,33 @@ collections:
                   },
                 ],
             }
+          - {
+              label: "Opinie",
+              name: "testimonials",
+              widget: "object",
+              fields:
+                [
+                  { label: "Tytuł", name: "title", widget: "string" },
+                  {
+                    label: "Opinie",
+                    name: "testimonialList",
+                    widget: "list",
+                    fields:
+                      [
+                        {
+                          label: "Imię i nazwisko",
+                          name: "fullName",
+                          widget: "string",
+                        },
+                        {
+                          label: "Tekst opinii",
+                          name: "testimonialText",
+                          widget: "text",
+                        },
+                      ],
+                  },
+                ],
+            }
 
       - label: "Kontakt"
         name: "contact"

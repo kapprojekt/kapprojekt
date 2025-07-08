@@ -46,8 +46,7 @@ faq:
               url: /kontakt
     - question: Czy mogę zgłosić się z projektem “na już”?
       sections:
-        - text:
-            Jeśli zależy Ci na czasie, skontaktuj się z nami. W zależności od obecnej
+        - text: Jeśli zależy Ci na czasie, skontaktuj się z nami. W zależności od obecnej
             dostępności, typu projektu i lokalizacji, ustalimy czy możliwe jest
             wykonanie projektu z szybkim terminem startu.
     - question: Czy jest minimalny lub maksymalny metraż projektowanej powierzchni?
@@ -63,8 +62,7 @@ faq:
               url: /kontakt
             - label: Zobacz ofertę
               url: /cennik
-    - question:
-        Jaki jest koszt wykończenia mieszkania od stanu deweloperskiego w 2025
+    - question: Jaki jest koszt wykończenia mieszkania od stanu deweloperskiego w 2025
         roku?
       sections:
         - text: >-
@@ -159,4 +157,50 @@ faq:
           buttons:
             - label: Konsultacja Wnętrzarska
               url: /cennik/konsultacja-wnetrzarska
+testimonials:
+  title: Co mówią o nas klienci?
+  testimonialList:
+    - fullName: Dagmara Stachowiak
+      testimonialText: Korzystaliśmy z pomocy KAP projekt przy projekcie naszego domu.
+        Z czystym sumieniem mogę powiedzieć, że jest to firma godna polecenia!
+        Wszystkie pomieszczenia rozstały dokładnie dopracowane w każdym detalu.
+        Jesteśmy bardzo zadowoleni ze współpracy z KAP projekt!
+    - fullName: Dorota Margalska
+      testimonialText: Projekty KAP Projekt urzekły mnie od samego początku. Bardzo
+        nowoczesne, eleganckie, stonowane, a do tego praktyczne i oryginalne.
+        Dokładnie takie jakich szukałam. Z współpracy jesteśmy bardzo
+        zadowoleni, Pani Kasia i Maja wniosły do projektu naszego domu wiele
+        bardzo fajnych i ciekawych pomysłów, same projekty są piękne,
+        eleganckie, takie jak chciałam. Kolejne projekty KAP Projekt ogromnie mi
+        się podobają i idealnie trafiają w mój gust. Dobór kolorów jest cudowny.
+        Aż chciałabym móc znów coś zaprojektować! 😃
+    - fullName: Jakub Martinek
+      testimonialText: Korzystałem z usługi projektowania mieszkania. Profesjonalne
+        podejście, wszystko przedstawione, wyjaśnione (zrozumiałe nawet dla
+        człowieka, który nie ma pojęcia o wykańczaniu mieszkania). Jestem
+        niesamowicie zadowolony, każdemu polecam, skorzystam ponownie w
+        przyszłości 🙂
+    - fullName: Magdalena Koss
+      testimonialText: >-
+        Bardzo polecam! 
+
+        Firma pomogła w projekcie salonu z aneksem kuchenny i korytarza. Pani Maja i Pani Kasia dzieliły się cennymi wskazówkami, pomogły zaplanować praktyczny projekt funkcjonalny i były uważne na wszystkie nasze potrzeby i preferencje. Udało znaleźć się produkty z lokalnych sklepów, chociaż współpraca była zdalna 😀
+
+        Bardzo pomocny był wykaz materiałów zebranych w jeden arkusz w Excel z linkami do konkretnych produktów, ceną, dokładnie wyliczoną ilością. 
+
+        Efekt przerósł moje oczekiwania 😍
+
+        Kolejny raz również zdecydowałabym się na ich usługi.
+    - testimonialText: >-
+        Aranżacja mieszkania pod kątem powierzchni, rozkładu, jak i moich
+        oczekiwań wobec niego było twardym orzechem do zgryzienia. W związku z
+        tym zdecydowałem się na współpracę z KAP Projekt, co było świetną
+        decyzją. Od początku zasady współpracy były klarowne, a dzięki bardzo
+        sprawnej komunikacji z Paniami i wielu cennym radom projekt  w całości
+        spełnił moje potrzeby - zarówno pod względem użytkowym jak i
+        funkcjonalnym.
+
+
+        Z całego serca polecam współpracę z Panią Kasią i Panią Mają!
+      fullName: Bogdan Czyżkowski
 ---

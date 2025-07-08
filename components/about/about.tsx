@@ -43,7 +43,7 @@ const About = () => {
             Dlaczego warto?
           </h2>
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 px-8 md:px-0 text-center">
-            <div className="overflow-hidden bg-white rounded-xl flex-1 flex flex-col justify-center">
+            <div className="overflow-hidden bg-white rounded-xl flex-1 flex flex-col">
               <div className="p-6">
                 <h1 className="my-6 text-xl leading-tight font-semibold text-gray-900">
                   Kompleksowo zajmiemy się Twoim projektem.
@@ -55,7 +55,7 @@ const About = () => {
               </div>
             </div>
 
-            <div className="overflow-hidden bg-white rounded-xl flex-1 flex flex-col justify-center">
+            <div className="overflow-hidden bg-white rounded-xl flex-1 flex flex-col">
               <div className="p-6">
                 <h1 className="my-6 text-xl leading-tight font-semibold text-gray-900">
                   Zyskujesz spokój i oszczędzasz czas i pieniądze
@@ -70,7 +70,7 @@ const About = () => {
               </div>
             </div>
 
-            <div className="overflow-hidden bg-white rounded-xl flex-1 flex flex-col justify-center">
+            <div className="overflow-hidden bg-white rounded-xl flex-1 flex flex-col">
               <div className="p-6">
                 <h1 className="my-6 text-xl leading-tight font-semibold text-gray-900">
                   Dom jak z pinteresta, ale ponadczasowy i Twój
@@ -85,7 +85,7 @@ const About = () => {
               </div>
             </div>
 
-            <div className="overflow-hidden bg-white rounded-xl flex-1 flex flex-col justify-center">
+            <div className="overflow-hidden bg-white rounded-xl flex-1 flex flex-col">
               <div className="p-6">
                 <h1 className="my-6 text-xl leading-tight font-semibold text-gray-900">
                   Wiesz ile to będzie kosztować

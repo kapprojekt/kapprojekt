@@ -9,6 +9,7 @@ import Faq from "@/components/faq/faq";
 import ProjectCarousel from "@/components/project/project-carousel";
 import MainTiles from "@/components/main-tiles/main-tiles";
 import About from "@/components/about/about";
+import TestimonialCarousel from "@/components/testimonial/testimonial-carousel";
 
 export default function Home() {
   const defaultData: HomePageData = {
@@ -113,6 +114,7 @@ export default function Home() {
       </section>
       <MainTiles />
       <ProjectCarousel projectsData={projectsData} />
+      <TestimonialCarousel testimonialData={data.testimonials!} />
       <Faq data={data.faq!} />
       <About />
     </main>

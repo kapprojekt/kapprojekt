@@ -1,8 +1,9 @@
 import type { Metadata } from "next";
 import { Nunito_Sans } from "next/font/google";
 import "./globals.css";
+import Script from "next/script";
 
-const nunito = Nunito_Sans({ subsets: ["latin"] })
+const nunito = Nunito_Sans({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
   title: "KAP Projekt",
@@ -16,11 +17,11 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="pl">
-      <body
-        className={`${nunito.className} antialiased`}
-      >
-        {children}
-      </body>
+      <head>
+        <link href="/admin/config.yml" type="text/yaml" rel="cms-config-url" />
+      </head>
+      <body className={`${nunito.className} antialiased`}>{children}</body>
+      <Script src="https://identity.netlify.com/v1/netlify-identity-widget.js" />
     </html>
   );
 }

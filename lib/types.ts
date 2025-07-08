@@ -26,6 +26,7 @@ export interface HomePageData {
     type: "fb" | "ig";
   }[];
   faq?: FaqData;
+  testimonials?: TestimonialsSection;
 }
 
 export interface FaqData {
@@ -60,4 +61,14 @@ export interface ProjectImageData {
   alt: string;
   width: number;
   height: number;
+}
+
+export interface TestimonialsSection {
+  title: string;
+  testimonialList: TestimonialData[];
+}
+
+export interface TestimonialData {
+  fullName: string;
+  testimonialText: string;
 }
