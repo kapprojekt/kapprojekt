@@ -1,4 +1,6 @@
 ---
+order: 1
+isOnHomepage: true
 title: Dom pod Poznaniem
 description: >-
   Dom pod Poznaniem powstał dla młodej pary która marzyła o ciemne, ale
