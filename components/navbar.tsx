@@ -12,7 +12,7 @@ const Navbar = () => {
   const pathname = usePathname();
 
   const [isOpen, setIsOpen] = useState(false);
-  const [isSticky, setIsSticky] = useState(true);
+  const [isSticky, setIsSticky] = useState(false);
 
   const refMenu = useRef<HTMLDivElement>(null);
 

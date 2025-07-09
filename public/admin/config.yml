@@ -214,7 +214,7 @@ collections:
     name: "projects"
     widget: "object"
     folder: "content/projects"
-    summary: "{{fields.title}} {{fields.isOnHomepage}}"
+    summary: "{{fields.order}}. {{fields.title}} {{fields.isOnHomepage | ternary('STRONA GŁÓWNA','')}}"
     create: true
     fields:
       - label: "Kolejność"
