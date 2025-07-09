@@ -1,6 +1,6 @@
 ---
 order: 6
-isOnHomepage: false
+isOnHomepage: true
 title: Mieszkanie w Puławach
 description: >-
   Męskie mieszkanie w Puławach utrzymane jest w ciemnej kolorystyce z dodatkiem
