@@ -1,6 +1,3 @@
-import Image from "next/image";
-
-import bgImage from "@/src/logo_salon kuchnia .jpg";
 import { getFolderMarkups, getMarkup } from "@/lib/utils";
 import { HomePageData, ProjectData } from "@/lib/types";
 import { FaFacebookF, FaInstagram } from "react-icons/fa";
@@ -10,13 +7,17 @@ import ProjectCarousel from "@/components/project/project-carousel";
 import MainTiles from "@/components/main-tiles/main-tiles";
 import About from "@/components/about/about";
 import TestimonialCarousel from "@/components/testimonial/testimonial-carousel";
+import CustomImage from "@/components/custom-image";
 
 export default function Home() {
   const defaultData: HomePageData = {
     title: "KAP Projekt",
-    subtitle: "",
-    longtext: "",
-    backgroundImage: bgImage,
+    subtitle: "Kompleksowo zaprojektujemy Twoje wnętrze",
+    longtext: `Nasz zespół doświadczonych architektów zajmie się Twoim wnętrzem od
+            układu funkcjonalnego aż po nadzór na budowie. Stworzymy miejsce w
+            Twoim stylu, dopasowane do Ciebie. Bez stresu, terminowo, od
+            początku do końca.`,
+    backgroundImage: "/src/background-image.jpg",
   };
 
   const homepageMatter = getMarkup("content/pages", "homepage.md");
@@ -42,11 +43,11 @@ export default function Home() {
   const projectsData = projects.map((project) => project.data) as ProjectData[];
 
   return (
-    <main id="home">
+    <main>
       <section className="z-10 min-h-max h-screen w-full relative">
-        <Image
+        <CustomImage
           className="-z-10 absolute w-full h-full object-cover"
-          src={data.backgroundImage}
+          src={data.backgroundImage.toString()}
           alt="homepage backgorund image"
           width={1400}
           height={1200}
@@ -57,13 +58,10 @@ export default function Home() {
             {data.title}
           </h1>
           <h2 className="mb-8 mt-2 text-xl sm:text-3xl md:text-4xl font-semibold drop-shadow-[0_0_10px_black] sm:w-4/5 md:w-2/3 lg:w-1/2">
-            Kompleksowo zaprojektujemy Twoje wnętrze
+            {data.subtitle}
           </h2>
           <p className="drop-shadow-[0_0_15px_black] text-sm sm:text-lg font-medium sm:w-2/3 md:w-1/2">
-            Nasz zespół doświadczonych architektów zajmie się Twoim wnętrzem od
-            układu funkcjonalnego aż po nadzór na budowie. Stworzymy miejsce w
-            Twoim stylu, dopasowane do Ciebie. Bez stresu, tenimowo, od początku
-            do końca.
+            {data.longtext}
           </p>
           <div className="mt-10 flex gap-4 flex-col sm:flex-row text-center">
             <Link

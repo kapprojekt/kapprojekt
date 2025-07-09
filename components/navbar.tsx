@@ -4,34 +4,30 @@ import Image from "next/image";
 import Link from "next/link";
 import React, { useEffect, useRef, useState } from "react";
 
-import logoImage from "@/src/logo-black.png";
+import logoBlack from "@/src/logo-black.png";
+import logoWhite from "@/src/logo-white.png";
 import { usePathname } from "next/navigation";
 
 const Navbar = () => {
   const pathname = usePathname();
 
   const [isOpen, setIsOpen] = useState(false);
+  const [isSticky, setIsSticky] = useState(true);
 
   const refMenu = useRef<HTMLDivElement>(null);
 
   const links = [
     {
-      href: "/#home",
+      href: "/",
       label: "Home",
-    },
-    {
-      href: "/#about",
-      label: "O nas",
     },
     {
       href: "/portfolio",
       label: "Portfolio",
-      disabled: true,
     },
     {
       href: "/cennik",
       label: "Cennik",
-      disabled: true,
     },
     {
       href: "/kontakt",
@@ -39,43 +35,69 @@ const Navbar = () => {
     },
   ];
 
+  const handleClickMenuOut = (e: PointerEvent) => {
+    const target = e.target as HTMLElement;
+    if (refMenu.current && !refMenu.current.contains(target)) {
+      setIsOpen(false);
+    }
+  };
+
+  const handleScroll = () => {
+    if (window.scrollY >= 100) {
+      setIsSticky(true);
+    } else {
+      setIsSticky(false);
+    }
+  };
+
   useEffect(() => {
-    const handleClickMenuOut = (e: PointerEvent) => {
-      const target = e.target as HTMLElement;
-      if (refMenu.current && !refMenu.current.contains(target)) {
-        setIsOpen(false);
-      }
-    };
+    if (pathname === "/") {
+      handleScroll();
+      document.addEventListener("scroll", handleScroll, true);
+    }
+
+    if (pathname !== "/") {
+      setIsSticky(true);
+    }
+
     document.addEventListener("pointerdown", handleClickMenuOut, true);
     setIsOpen(false);
 
     return () => {
+      document.removeEventListener("scroll", handleScroll, true);
       document.removeEventListener("pointerdown", handleClickMenuOut, true);
     };
   }, [pathname]);
 
   return (
     <nav
-      className={`z-50 fixed top-0 left-0 right-0 flex justify-between items-center px-10 before:absolute
-			before:-z-10 before:inset-0 before:w-full before:h-full before:bg-[rgb(243,239,233,0.2)] before:backdrop-blur-sm`}
+      className={`z-50 fixed top-0 left-0 right-0 flex justify-between items-center px-10 duration-300 ${
+        isSticky ? "bg-[rgb(243,_239,_233)] shadow-sm" : "bg-transparent"
+      }`}
     >
       <Link href="/">
         <Image
           className="w-14 h-14 my-2"
-          src={logoImage}
+          src={isSticky ? logoBlack : logoWhite}
           alt="logo"
-          width={1000}
-          height={1000}
+          width={600}
+          height={600}
         />
       </Link>
-      <div className="hidden lg:flex lg:items-center lg:justify-center lg:gap-2">
+      <div
+        className={`hidden lg:flex lg:items-center lg:justify-center lg:gap-2 ${
+          isSticky ? "text-black font-bold" : "text-stone-200 font-semibold"
+        }`}
+      >
         {links.map((link) => (
           <Link
             key={link.label}
-            className={`shrink-0 px-10 py-2 border-y-2 border-transparent font-bold transition-all ${
+            className={`shrink-0 px-10 py-2 border-y-2 border-transparent transition-all ${
               pathname === link.href
                 ? `
-								hover:drop-shadow-none hover:transform-none border-b-stone-600`
+								hover:drop-shadow-none hover:transform-none ${
+                  isSticky ? "border-b-stone-600" : "border-b-stone-400"
+                }`
                 : `hover:-translate-y-0.5
 							hover:drop-shadow-[0_3px_4px_rgba(0,0,0,0.2)]`
             }`}
@@ -85,8 +107,12 @@ const Navbar = () => {
           </Link>
         ))}
         <Link
-          className="px-4 py-3 text-base font-semibold transition-all duration-200 border-2
-                  border-stone-600 rounded-md hover:bg-stone-600 hover:text-white"
+          className={`px-4 py-3 text-base transition-all duration-200 border-2
+                   rounded-md ${
+                     isSticky
+                       ? "border-stone-600 hover:bg-stone-600 hover:text-white"
+                       : "border-stone-400 hover:bg-stone-400 hover:text-black"
+                   }`}
           href="/kontakt"
         >
           Darmowa wycena
@@ -95,28 +121,27 @@ const Navbar = () => {
       <div className="lg:hidden" ref={refMenu}>
         <button
           onClick={() => setIsOpen(!isOpen)}
-          className="lg:hidden relative flex justify-center items-center w-9 h-8 hover:bg-[rgba(255,255,255,0.2)] rounded-sm"
+          className="lg:hidden relative flex justify-center items-center w-9 h-8 rounded-sm"
         >
           <span
-            className={`absolute h-0.5 w-4/5 bg-black block rounded-4xl duration-300 ${
+            className={`absolute h-0.5 w-4/5 block rounded-4xl duration-300 ${
               isOpen ? "rotate-45" : "-translate-y-2"
-            }`}
+            } ${isSticky ? "bg-black" : "bg-white"}`}
           />
           <span
-            className={`absolute h-0.5 w-4/5 bg-black block rounded-4xl duration-200 ${
+            className={`absolute h-0.5 w-4/5 block rounded-4xl duration-200 ${
               isOpen ? "opacity-0" : "opacity-100"
-            }`}
+            } ${isSticky ? "bg-black" : "bg-white"}`}
           />
           <span
-            className={`absolute h-0.5 w-4/5 bg-black block rounded-4xl duration-300 ${
+            className={`absolute h-0.5 w-4/5 block rounded-4xl duration-300 ${
               isOpen ? "-rotate-45" : "translate-y-2"
-            }`}
+            } ${isSticky ? "bg-black" : "bg-white"}`}
           />
         </button>
         <div
-          className={`absolute lg:hidden rounded-sm flex flex-col items-center inset-x-8 top-20 text-xl
-					duration-300 py-4 before:absolute before:w-full before:h-full before:inset-0
-					before:bg-[rgb(243,239,233,0.2)] before:rounded-sm before:backdrop-blur-sm
+          className={`absolute lg:hidden bg-[rgb(243,_239,_233)] rounded-sm flex flex-col items-center inset-x-8 top-20 text-xl
+					duration-300 py-4 shadow-lg
 					${
             isOpen
               ? "translate-y-0 scale-100 opacity-100 visible"

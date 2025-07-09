@@ -8,6 +8,13 @@ backend:
 media_folder: "public/media"
 public_folder: "/media"
 
+media_library:
+  name: cloudinary
+  config:
+    cloud_name: dsllxh346
+    api_key: 916775776984758
+    multiple: true
+
 slug:
   encoding: "ascii"
   clean_accents: true
@@ -132,6 +139,49 @@ collections:
                   },
                 ],
             }
+          - {
+              label: "O nas",
+              name: "about",
+              widget: "object",
+              fields:
+                [
+                  { label: "Tytuł", name: "title", widget: "string" },
+                  {
+                    label: "Sekcje",
+                    name: "sections",
+                    widget: "list",
+                    fields:
+                      [
+                        { label: "Nagłówek", name: "header", widget: "string" },
+                        {
+                          label: "Tekst",
+                          name: "text",
+                          widget: "text",
+                          required: false,
+                        },
+                        {
+                          label: "Kafelki",
+                          name: "tiles",
+                          widget: "list",
+                          required: false,
+                          fields:
+                            [
+                              {
+                                label: "Nagłówek kafelka",
+                                name: "tileHeader",
+                                widget: "string",
+                              },
+                              {
+                                label: "Tekst kafelka",
+                                name: "tileText",
+                                widget: "text",
+                              },
+                            ],
+                        },
+                      ],
+                  },
+                ],
+            }
 
       - label: "Kontakt"
         name: "contact"
@@ -164,6 +214,7 @@ collections:
     name: "projects"
     widget: "object"
     folder: "content/projects"
+    summary: "{{fields.title}} {{fields.isOnHomepage}}"
     create: true
     fields:
       - label: "Kolejność"

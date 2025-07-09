@@ -5,8 +5,8 @@ const ProjectInfoTile = ({
 }: React.HTMLAttributes<HTMLDivElement>) => {
   return (
     <div
-      className="rounded-md shadow-lg bg-stone-600 text-white flex gap-2
-	px-3 sm:px-4 py-2 sm:py-3 justify-center items-center"
+      className="rounded-md text-stone-600 flex gap-2
+	 py-2 sm:py-3 justify-center items-center"
     >
       {children}
     </div>

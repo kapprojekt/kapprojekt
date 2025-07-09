@@ -1,14 +1,11 @@
 ---
 title: KAP Projekt
-tags:
-  - Projektowanie wnętrz
-  - Inspiracje
-  - Home staging
 subtitle: Kompleksowo zaprojektujemy Twoje wnętrze
 longtext: Nasz zespół doświadczonych architektów zajmie się Twoim wnętrzem od
   układu funkcjonalnego aż po nadzór na budowie. Stworzymy miejsce w Twoim
   stylu, dopasowane do Ciebie. Bez stresu, terminowo, od początku do końca.
-backgroundImage: /media/logo_salon-kuchnia-.jpg
+backgroundImage:
+  - https://res.cloudinary.com/dsllxh346/image/upload/v1752082250/background-image_gdsmg1.jpg
 socialMedia:
   - type: ig
     url: https://www.instagram.com/kap.projekt/
@@ -182,11 +179,11 @@ testimonials:
         przyszłości 🙂
     - fullName: Magdalena Koss
       testimonialText: >-
-        Bardzo polecam! 
+        Bardzo polecam!
 
         Firma pomogła w projekcie salonu z aneksem kuchenny i korytarza. Pani Maja i Pani Kasia dzieliły się cennymi wskazówkami, pomogły zaplanować praktyczny projekt funkcjonalny i były uważne na wszystkie nasze potrzeby i preferencje. Udało znaleźć się produkty z lokalnych sklepów, chociaż współpraca była zdalna 😀
 
-        Bardzo pomocny był wykaz materiałów zebranych w jeden arkusz w Excel z linkami do konkretnych produktów, ceną, dokładnie wyliczoną ilością. 
+        Bardzo pomocny był wykaz materiałów zebranych w jeden arkusz w Excel z linkami do konkretnych produktów, ceną, dokładnie wyliczoną ilością.
 
         Efekt przerósł moje oczekiwania 😍
 
@@ -203,4 +200,46 @@ testimonials:
 
         Z całego serca polecam współpracę z Panią Kasią i Panią Mają!
       fullName: Bogdan Czyżkowski
+about:
+  title: O nas
+  sections:
+    - header: Studio
+      text: KAP Projekt tworzą architektki Maja i Katarzyna. Skończyłyśmy studia
+        magisterskie na wydziale Architektury we Wrocławiu. Po kilku latach
+        zbierania doświadczenia w Polsce i za granicą, stworzyłyśmy KAP Projekt.
+        Tworzymy wnętrza prywatne - domy, mieszkania, lokale na wynajem,
+        komercyjne i biurowe. Naszym celem jest pełne zadowolenie naszych
+        Klientów, piękne wnętrze i mądre rozwiązania funkcjonalnego, które
+        sprawią, że każdy dzień w Twoim Domu będzie idealny.
+    - header: Co nas wyróżnia
+      text: Nasze studio wyróżnia dbałość o indywidulane podejście, profesjonalne
+        podejście i elastyczność. Jesteśmy otwarci na modyfikacje oferty i
+        harmonogramu, tak aby Twoje wnętrze powstało bezstresowo, w miłej
+        atmosferze i w pełni tak jak Ci wygodnie. Prowadzimy projekty
+        stacjonarnie, zdalnie lub hybrydowo w zależności od lokalizacji i
+        preferencji Inwestora.
+      tiles: []
+    - header: Dlaczego warto?
+      tiles:
+        - tileHeader: Kompleksowo zajmiemy się Twoim projektem.
+          tileText: Jeśli chcesz zajmiemy się też zamówieniami i nadzorem ekip budowlanych
+            i wykończeniowych.
+        - tileHeader: Zyskujesz spokój i oszczędzasz czas i pieniądze
+          tileText: Dzięki naszej wiedzy i doświadczeniu, nie musisz spędzać długich
+            godzin na szukaniu odpowiednich materiałów i mebli. Zrobimy to za
+            Ciebie bezbłędnie, dzięki czemu nie stracisz pieniędzy na nieudane
+            rozwiązania a przed zakupem wszystko zobaczysz na wizualizacjach.
+        - tileHeader: Dom jak z pinteresta, ale ponadczasowy i Twój
+          tileText: Masz głowę pełną pomysłów, Twój folder inspiracji pęka w szwach, a
+            może zupełnie nie wiesz jak zacząć? Bez względu na odpowiedz,
+            pomożemy Ci stworzyć miejsce, które będzie w pełni odzwierciedlać
+            Twój styl, a do tego będzie oryginalne i funkcjonalne.
+        - tileHeader: Wiesz ile to będzie kosztować
+          tileText: Nasi klienci dostają od nas plik Excel lub Arkusz Google z pełnym
+            zestawieniem materiałów, mebli i elementów na wymiar dzięki czemu
+            wiedzą, że mieszczą się w założonym budżecie.
+tags:
+  - Projektowanie wnętrz
+  - Inspiracje
+  - Home staging
 ---

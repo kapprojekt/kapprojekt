@@ -15,7 +15,7 @@ const About = () => {
           <h2 className="text-xl my-6 font-bold leading-tight text-black sm:text-2xl lg:text-3xl">
             Studio
           </h2>
-          <p className="my-12 leading-relaxed text-justify text-gray-600 sm:text-lg lg:text-xl">
+          <p className="mb-12 leading-relaxed text-justify text-gray-600 sm:text-lg lg:text-xl">
             KAP Projekt tworzą architektki Maja i Katarzyna. Skończyłyśmy studia
             magisterskie na wydziale Architektury we Wrocławiu. Po kilku latach
             zbierania doświadczenia w Polsce i za granicą, stworzyłyśmy KAP
@@ -29,7 +29,7 @@ const About = () => {
           <h2 className="text-xl my-6 font-bold leading-tight text-black sm:text-2xl lg:text-3xl">
             Co nas wyróżnia
           </h2>
-          <p className="my-12 leading-relaxed text-justify text-gray-600 sm:text-lg lg:text-xl">
+          <p className="mb-12 leading-relaxed text-justify text-gray-600 sm:text-lg lg:text-xl">
             Nasze studio wyróżnia dbałość o indywidulane podejście,
             profesjonalne podejście i elastyczność. Jesteśmy otwarci na
             modyfikacje oferty i harmonogramu, tak aby Twoje wnętrze powstało

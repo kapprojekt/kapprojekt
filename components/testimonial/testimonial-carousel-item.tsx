@@ -2,7 +2,7 @@
 
 import { TestimonialData } from "@/lib/types";
 import React, { useState } from "react";
-import { FaChevronDown, FaStar } from "react-icons/fa6";
+import { FaChevronDown, FaRegStar, FaStar } from "react-icons/fa6";
 import Markdown from "react-markdown";
 
 interface TestimonialCarouselItemProps {
@@ -16,12 +16,12 @@ const TestimonialCarouselItem = ({
 
   return (
     <div className="flex flex-col items-center shadow-xl rounded-md bg-white p-6 space-y-4">
-      <div className="flex justify-center items-center">
-        <FaStar />
-        <FaStar />
-        <FaStar />
-        <FaStar />
-        <FaStar />
+      <div className="flex justify-center items-center text-gray-400">
+        <FaRegStar />
+        <FaRegStar />
+        <FaRegStar />
+        <FaRegStar />
+        <FaRegStar />
       </div>
       <h2 className="text-center font-bold text-xl text-gray-800">
         {testimonial.fullName}

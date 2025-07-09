@@ -31,16 +31,17 @@ const PortfolioItemPage = async ({ params }: PortfolioItemPageProps) => {
         <p className="my-12 leading-relaxed text-justify text-gray-600 sm:text-lg lg:text-xl">
           {data.description}
         </p>
-        <div className="flex flex-wrap gap-2">
+        <div className="flex flex-wrap items-center gap-3">
           {data.location && (
             <ProjectInfoTile>
-              <FaLocationPin />
+              {/* <FaLocationPin /> */}
               <span>{data.location}</span>
             </ProjectInfoTile>
           )}
+          |
           {data.date && (
             <ProjectInfoTile>
-              <FaCalendar />
+              {/* <FaCalendar /> */}
               <span>{data.date}</span>
             </ProjectInfoTile>
           )}
