@@ -4,7 +4,6 @@ import { notFound } from "next/navigation";
 import { ProjectData } from "@/lib/types";
 import Gallery from "@/components/gallery/gallery";
 import ProjectInfoTile from "@/components/project/project-info-tile";
-import { FaLocationPin, FaCalendar, FaDoorOpen } from "react-icons/fa6";
 
 interface PortfolioItemPageProps {
   params: Promise<{
@@ -34,20 +33,18 @@ const PortfolioItemPage = async ({ params }: PortfolioItemPageProps) => {
         <div className="flex flex-wrap items-center gap-3">
           {data.location && (
             <ProjectInfoTile>
-              {/* <FaLocationPin /> */}
               <span>{data.location}</span>
             </ProjectInfoTile>
           )}
           |
           {data.date && (
             <ProjectInfoTile>
-              {/* <FaCalendar /> */}
               <span>{data.date}</span>
             </ProjectInfoTile>
           )}
+          |
           {data.projectType && (
             <ProjectInfoTile>
-              <FaDoorOpen />
               <span>{data.projectType}</span>
             </ProjectInfoTile>
           )}

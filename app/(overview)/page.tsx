@@ -79,19 +79,6 @@ export default function Home() {
               Darmowa wycena
             </Link>
           </div>
-          {/* <div className="mt-4 flex gap-1 justify-center flex-wrap">
-            {data.tags.map((label) => (
-              <span
-                key={label}
-                className="bg-[rgb(243,239,233,0.2)] backdrop-blur-sm px-4 py-2
-                    font-semibold rounded-sm"
-              >
-                <span className="text-sm md:text-base drop-shadow-[0_0_10px_black]">
-                  {label}
-                </span>
-              </span>
-            ))}
-          </div> */}
         </header>
         {data.socialMedia && (
           <article className="absolute w-full bottom-0 flex justify-center gap-3 mb-6 text-white">

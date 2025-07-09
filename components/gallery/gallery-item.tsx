@@ -20,11 +20,6 @@ const GalleryItem = ({ imageItem }: GalleryItemProps) => {
       if (divRef.current) {
         setGalleryWidth(divRef.current.offsetWidth);
       }
-      // const currentW = window.innerWidth;
-      // if (currentW) {
-      //   setGalleryWidth(currentW);
-      // }
-      // console.log(galleryWidth);
     };
 
     window.addEventListener("resize", handleResize);

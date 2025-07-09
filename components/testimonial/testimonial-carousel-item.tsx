@@ -2,7 +2,7 @@
 
 import { TestimonialData } from "@/lib/types";
 import React, { useState } from "react";
-import { FaChevronDown, FaRegStar, FaStar } from "react-icons/fa6";
+import { FaChevronDown, FaRegStar } from "react-icons/fa6";
 import Markdown from "react-markdown";
 
 interface TestimonialCarouselItemProps {
