@@ -1,15 +1,15 @@
 import React from "react";
 import Link from "next/link";
 import { ProjectData } from "@/lib/types";
-import Image from "next/image";
+import CustomImage from "../custom-image";
 
 const ProjectTile = ({ project }: { project: ProjectData }) => {
   return (
     <Link href={`/portfolio/${project.slug}`}>
       <div className="group overflow-hidden bg-white rounded shadow-lg relative cursor-pointer">
-        <Image
+        <CustomImage
           className="object-cover aspect-[4/3] w-full group-hover:scale-110 duration-300"
-          src={project.images[0].image}
+          src={project.images[0].image.toString()}
           alt={project.images[0].alt}
           width={400}
           height={400}

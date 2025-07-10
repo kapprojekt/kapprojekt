@@ -36,13 +36,13 @@ const PortfolioItemPage = async ({ params }: PortfolioItemPageProps) => {
               <span>{data.location}</span>
             </ProjectInfoTile>
           )}
-          |
+          {data.location && data.date && "|"}
           {data.date && (
             <ProjectInfoTile>
               <span>{data.date}</span>
             </ProjectInfoTile>
           )}
-          |
+          {data.date && data.projectType && "|"}
           {data.projectType && (
             <ProjectInfoTile>
               <span>{data.projectType}</span>

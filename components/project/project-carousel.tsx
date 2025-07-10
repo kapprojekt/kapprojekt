@@ -16,6 +16,12 @@ interface ProjectCarouselProps {
 }
 
 const ProjectCarousel = ({ projectsData }: ProjectCarouselProps) => {
+  const filteredProjectsData = projectsData.filter(
+    (project) => project.isOnHomepage
+  );
+
+  filteredProjectsData.sort((a, b) => b.order - a.order);
+
   return (
     <section className="w-full max-w-7xl mx-auto py-10 sm:py-16 lg:py-24 h-full px-4 sm:px-6 lg:px-8">
       <h1 className="text-3xl font-bold leading-tight text-black sm:text-4xl lg:text-5xl">
@@ -34,7 +40,7 @@ const ProjectCarousel = ({ projectsData }: ProjectCarouselProps) => {
         modules={[Pagination, Navigation]}
         className="mb-6 w-full"
       >
-        {projectsData.map((project) => (
+        {filteredProjectsData.map((project) => (
           <SwiperSlide key={project.slug} className="w-full sm:max-w-xs">
             <ProjectCarouselItem project={project} />
           </SwiperSlide>

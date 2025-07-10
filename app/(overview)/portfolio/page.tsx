@@ -16,6 +16,8 @@ const PortfolioPage = () => {
 
   const projectsData = projects.map((project) => project.data) as ProjectData[];
 
+  projectsData.sort((a, b) => b.order - a.order);
+
   return (
     <section className="py-24">
       <div className="px-4 mx-auto sm:px-6 lg:px-8 max-w-7xl">

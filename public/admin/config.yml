@@ -214,6 +214,7 @@ collections:
     name: "projects"
     widget: "object"
     folder: "content/projects"
+    sortable_fields: ["order", "title"]
     summary: "{{fields.order}}. {{fields.title}} {{fields.isOnHomepage | ternary('STRONA GŁÓWNA','')}}"
     create: true
     fields:
@@ -227,7 +228,7 @@ collections:
       - label: "Strona główna"
         name: "isOnHomepage"
         widget: "boolean"
-        default: false
+        required: false
       - label: "Tytuł"
         name: "title"
         widget: "string"

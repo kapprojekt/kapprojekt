@@ -1,8 +1,8 @@
 "use client";
 
 import { ProjectImageData } from "@/lib/types";
-import Image from "next/image";
 import React, { useEffect, useRef, useState } from "react";
+import CustomImage from "../custom-image";
 
 interface GalleryItemProps {
   imageItem: ProjectImageData;
@@ -40,8 +40,8 @@ const GalleryItem = ({ imageItem }: GalleryItemProps) => {
       style={{ gridRow: `span ${imageSpans}` }}
     >
       <div className="rounded-md overflow-hidden group">
-        <Image
-          src={imageItem.image}
+        <CustomImage
+          src={imageItem.image.toString()}
           alt={imageItem.alt}
           width={galleryWidth}
           height={galleryHeight}

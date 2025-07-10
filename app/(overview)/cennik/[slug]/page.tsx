@@ -1,7 +1,7 @@
+import CustomImage from "@/components/custom-image";
 import Button from "@/components/ui/button";
 import { PriceListInterface } from "@/lib/types";
 import { getMarkup } from "@/lib/utils";
-import Image from "next/image";
 import Link from "next/link";
 import { notFound } from "next/navigation";
 import React from "react";
@@ -70,9 +70,9 @@ const PriceListPage = async ({ params }: PriceListPageProps) => {
                     )}
                   </div>
                   {offer.image && (
-                    <Image
+                    <CustomImage
                       className="w-full h-auto object-contain mx-auto max-w-[500px]"
-                      src={offer.image}
+                      src={offer.image.toString()}
                       alt={offer.title}
                       width={400}
                       height={400}

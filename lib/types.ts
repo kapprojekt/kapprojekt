@@ -47,6 +47,8 @@ export interface FaqItemData {
 
 export interface ProjectData {
   slug: string;
+  order: number;
+  isOnHomepage: boolean;
   title: string;
   description: string;
   location?: string;
