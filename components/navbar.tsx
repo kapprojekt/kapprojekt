@@ -1,12 +1,10 @@
 "use client";
 
-import Image from "next/image";
 import Link from "next/link";
 import React, { useEffect, useRef, useState } from "react";
 
-import logoBlack from "@/src/logo-black.png";
-import logoWhite from "@/src/logo-white.png";
 import { usePathname } from "next/navigation";
+import CustomImage from "./custom-image";
 
 const Navbar = () => {
   const pathname = usePathname();
@@ -15,6 +13,11 @@ const Navbar = () => {
   const [isSticky, setIsSticky] = useState(false);
 
   const refMenu = useRef<HTMLDivElement>(null);
+
+  const logoBlack =
+    "https://res.cloudinary.com/dsllxh346/image/upload/v1752172616/logo-black_frmeir.png";
+  const logoWhite =
+    "https://res.cloudinary.com/dsllxh346/image/upload/v1752172616/logo-white_tjnlbh.png";
 
   const links = [
     {
@@ -76,7 +79,7 @@ const Navbar = () => {
       }`}
     >
       <Link href="/">
-        <Image
+        <CustomImage
           className="w-14 h-14 my-2"
           src={isSticky ? logoBlack : logoWhite}
           alt="logo"

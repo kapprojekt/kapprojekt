@@ -1,5 +1,5 @@
 import React from "react";
-import { getMarkup } from "@/lib/utils";
+import { getFolderMarkups, getMarkup } from "@/lib/utils";
 import { notFound } from "next/navigation";
 import { ProjectData } from "@/lib/types";
 import Gallery from "@/components/gallery/gallery";
@@ -9,6 +9,14 @@ interface PortfolioItemPageProps {
   params: Promise<{
     slug: string;
   }>;
+}
+
+export async function generateStaticParams() {
+  const files = getFolderMarkups("content/projects");
+
+  return files?.map((file) => ({
+    slug: file.data.slug,
+  }));
 }
 
 const PortfolioItemPage = async ({ params }: PortfolioItemPageProps) => {

@@ -1,7 +1,7 @@
 import CustomImage from "@/components/custom-image";
 import Button from "@/components/ui/button";
 import { PriceListInterface } from "@/lib/types";
-import { getMarkup } from "@/lib/utils";
+import { getFolderMarkups, getMarkup } from "@/lib/utils";
 import Link from "next/link";
 import { notFound } from "next/navigation";
 import React from "react";
@@ -10,6 +10,14 @@ interface PriceListPageProps {
   params: Promise<{
     slug: string;
   }>;
+}
+
+export async function generateStaticParams() {
+  const files = getFolderMarkups("content/price-list");
+
+  return files?.map((file) => ({
+    slug: file.data.slug,
+  }));
 }
 
 const PriceListPage = async ({ params }: PriceListPageProps) => {
