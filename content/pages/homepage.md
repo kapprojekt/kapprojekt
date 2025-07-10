@@ -157,12 +157,12 @@ faq:
 testimonials:
   title: Co mówią o nas klienci?
   testimonialList:
-    - fullName: Dagmara Stachowiak
+    - fullName: Dagmara S.
       testimonialText: Korzystaliśmy z pomocy KAP projekt przy projekcie naszego domu.
         Z czystym sumieniem mogę powiedzieć, że jest to firma godna polecenia!
         Wszystkie pomieszczenia rozstały dokładnie dopracowane w każdym detalu.
         Jesteśmy bardzo zadowoleni ze współpracy z KAP projekt!
-    - fullName: Dorota Margalska
+    - fullName: Dorota M.
       testimonialText: Projekty KAP Projekt urzekły mnie od samego początku. Bardzo
         nowoczesne, eleganckie, stonowane, a do tego praktyczne i oryginalne.
         Dokładnie takie jakich szukałam. Z współpracy jesteśmy bardzo
@@ -171,13 +171,13 @@ testimonials:
         eleganckie, takie jak chciałam. Kolejne projekty KAP Projekt ogromnie mi
         się podobają i idealnie trafiają w mój gust. Dobór kolorów jest cudowny.
         Aż chciałabym móc znów coś zaprojektować! 😃
-    - fullName: Jakub Martinek
+    - fullName: Jakub M.
       testimonialText: Korzystałem z usługi projektowania mieszkania. Profesjonalne
         podejście, wszystko przedstawione, wyjaśnione (zrozumiałe nawet dla
         człowieka, który nie ma pojęcia o wykańczaniu mieszkania). Jestem
         niesamowicie zadowolony, każdemu polecam, skorzystam ponownie w
         przyszłości 🙂
-    - fullName: Magdalena Koss
+    - fullName: Magdalena K.
       testimonialText: >-
         Bardzo polecam!
 
@@ -199,7 +199,7 @@ testimonials:
 
 
         Z całego serca polecam współpracę z Panią Kasią i Panią Mają!
-      fullName: Bogdan Czyżkowski
+      fullName: Bogdan C.
 about:
   title: O nas
   sections:
