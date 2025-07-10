@@ -15,9 +15,11 @@ interface PriceListPageProps {
 export async function generateStaticParams() {
   const files = getFolderMarkups("content/price-list");
 
-  return files?.map((file) => ({
-    slug: file.data.slug,
-  }));
+  return (
+    files?.map((file) => ({
+      slug: file.data.slug,
+    })) || []
+  );
 }
 
 const PriceListPage = async ({ params }: PriceListPageProps) => {
