@@ -8,6 +8,7 @@ import MainTiles from "@/components/main-tiles/main-tiles";
 import About from "@/components/about/about";
 import TestimonialCarousel from "@/components/testimonial/testimonial-carousel";
 import CustomImage from "@/components/custom-image";
+import ContactForm from "@/components/contact/contact-form";
 
 export default function Home() {
   const defaultData: HomePageData = {
@@ -102,6 +103,9 @@ export default function Home() {
       <TestimonialCarousel testimonialData={data.testimonials!} />
       <Faq data={data.faq!} />
       <About />
+      <section className="w-full max-w-5xl mx-auto py-10 sm:py-16 lg:py-24 h-full px-2 sm:px-6 lg:px-8">
+        <ContactForm />
+      </section>
     </main>
   );
 }
