@@ -2,7 +2,8 @@
 title: Konsultacja Wnętrzarska
 description: 100 zł/h
 type: additional
-image: /media/koncepcja-kolor_kap.jpg
+image:
+  - https://res.cloudinary.com/dsllxh346/image/upload/v1752107211/koncepcja-kolor_kap_o3fe6r.jpg
 offer:
   - description: >-
       Chcesz uporządkować tonę inspiracji na temat Twojego przyszłego domu, a
