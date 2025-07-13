@@ -22,7 +22,7 @@ const ProjectTile = ({ project }: { project: ProjectData }) => {
           <h1 className="text-center text-[rgb(243,239,233)] text-2xl font-bold drop-shadow-[0_0_10px_black]">
             {project.title}
           </h1>
-          <div className="absolute -right-1 -bottom-1 bg-stone-600/70 backdrop-blur-xs text-[rgb(243,239,233)] text-xl pl-3 pt-3 pb-4 pr-4 rounded-md">
+          <div className="absolute -right-1 -bottom-1 text-[rgb(243,239,233)] text-xl pl-3 pt-3 pb-4 pr-4 rounded-md">
             <FaChevronRight />
           </div>
         </div>
