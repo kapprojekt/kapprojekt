@@ -45,7 +45,8 @@ const GalleryItem = ({ imageItem }: GalleryItemProps) => {
           alt={imageItem.alt}
           width={galleryWidth}
           height={galleryHeight}
-          className="group-hover:opacity-75"
+          sizes={galleryWidth.toString()}
+          className="group-hover:opacity-75 w-full h-auto"
         />
       </div>
     </div>

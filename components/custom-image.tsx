@@ -8,6 +8,8 @@ interface CustomImageProps extends React.HTMLAttributes<HTMLImageElement> {
   alt: string;
   width?: number | `${number}`;
   height?: number | `${number}`;
+  priority?: boolean;
+  sizes?: string;
 }
 
 const CustomImage = ({
@@ -16,6 +18,8 @@ const CustomImage = ({
   alt,
   width,
   height,
+  priority,
+  sizes,
 }: CustomImageProps) => {
   return (
     <CldImage
@@ -24,6 +28,8 @@ const CustomImage = ({
       alt={alt}
       width={width}
       height={height}
+      priority={priority}
+      sizes={sizes}
     />
   );
 };

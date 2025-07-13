@@ -21,12 +21,14 @@ export interface HomePageData {
   subtitle: string;
   longtext: string;
   backgroundImage: string | StaticImageData;
-  socialMedia?: {
-    url: string;
-    type: "fb" | "ig";
-  }[];
+  socialMedia?: SocialMedia[];
   faq?: FaqData;
   testimonials?: TestimonialsSection;
+}
+
+export interface SocialMedia {
+  url: string;
+  type: "fb" | "ig";
 }
 
 export interface FaqData {
@@ -73,4 +75,19 @@ export interface TestimonialsSection {
 export interface TestimonialData {
   fullName: string;
   testimonialText: string;
+}
+
+export interface FooterData {
+  title: string;
+  fullnames: {
+    fullname: string;
+  }[];
+  locations: {
+    location: string;
+  }[];
+  phoneNumbers: {
+    phoneNumber: string;
+  }[];
+  email: string;
+  socialMedia: SocialMedia[];
 }

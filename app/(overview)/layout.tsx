@@ -1,13 +1,15 @@
-import Navbar from '@/components/navbar'
-import React from 'react'
+import Footer from "@/components/footer/footer";
+import Navbar from "@/components/navbar";
+import React from "react";
 
-const PagesLayout = ({children}: {children: React.ReactNode}) => {
+const PagesLayout = ({ children }: { children: React.ReactNode }) => {
   return (
-	<>
-		<Navbar />
-		{children}
-	</>
-  )
-}
+    <>
+      <Navbar />
+      {children}
+      <Footer />
+    </>
+  );
+};
 
-export default PagesLayout
+export default PagesLayout;
