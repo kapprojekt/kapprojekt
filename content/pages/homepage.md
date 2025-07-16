@@ -154,6 +154,18 @@ faq:
           buttons:
             - label: Konsultacja Wnętrzarska
               url: /cennik/konsultacja-wnetrzarska
+imageSection:
+  title: Tworzymy projekty dostosowane do Twojego stylu i potrzeb. Niepowtarzalne,
+    subtelne, kolorowe, klimatyczne.
+  workLocations:
+    - workType: Stacjonarnie
+      workLocation: Warszawa, Wrocław
+    - workType: Hybrydowo
+      workLocation: okolice Warszawy (do 30 km), okolice Wrocławia (do 30 km), Lublin
+    - workType: Zdalnie
+      workLocation: bez ograniczeń
+  backgroundImage:
+    - https://res.cloudinary.com/dsllxh346/image/upload/v1752106320/K22_5_sqg7qd.jpg
 testimonials:
   title: Co mówią o nas klienci?
   testimonialList:

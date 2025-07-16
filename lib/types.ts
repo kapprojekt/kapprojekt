@@ -23,6 +23,7 @@ export interface HomePageData {
   backgroundImage: string | StaticImageData;
   socialMedia?: SocialMedia[];
   faq?: FaqData;
+  imageSection?: ImageSectionData;
   testimonials?: TestimonialsSection;
 }
 
@@ -45,6 +46,15 @@ export interface FaqItemData {
       url: string;
     }[];
   }[];
+}
+
+export interface ImageSectionData {
+  title: string;
+  workLocations: {
+    workType: "Stacjonarnie" | "Hybrydowo" | "Zdalnie";
+    workLocation: string;
+  }[];
+  backgroundImage: string;
 }
 
 export interface ProjectData {

@@ -113,6 +113,40 @@ collections:
                 ],
             }
           - {
+              label: "Sekcja ze zdjęciem",
+              name: "imageSection",
+              widget: "object",
+              fields:
+                [
+                  { label: "Tytuł", name: "title", widget: "string" },
+                  {
+                    label: "Miejsca pracy",
+                    name: "workLocations",
+                    widget: "list",
+                    fields:
+                      [
+                        {
+                          label: "Typ pracy",
+                          name: "workType",
+                          widget: "select",
+                          options: ["Stacjonarnie", "Hybrydowo", "Zdalnie"],
+                          default: ["Stacjonarnie"],
+                        },
+                        {
+                          label: "Lokalizacja",
+                          name: "workLocation",
+                          widget: "string",
+                        },
+                      ],
+                  },
+                  {
+                    label: "Tło (zdjęcie)",
+                    name: "backgroundImage",
+                    widget: "image",
+                  },
+                ],
+            }
+          - {
               label: "Opinie",
               name: "testimonials",
               widget: "object",

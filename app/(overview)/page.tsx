@@ -9,6 +9,7 @@ import About from "@/components/about/about";
 import TestimonialCarousel from "@/components/testimonial/testimonial-carousel";
 import CustomImage from "@/components/custom-image";
 import ContactForm from "@/components/contact/contact-form";
+import ImageSection from "@/components/image-section/image-section";
 
 export default function Home() {
   const defaultData: HomePageData = {
@@ -102,6 +103,7 @@ export default function Home() {
       <ProjectCarousel projectsData={projectsData} />
       <TestimonialCarousel testimonialData={data.testimonials!} />
       <Faq data={data.faq!} />
+      {/* <ImageSection data={data.imageSection!} /> */}
       <About />
       <section className="w-full max-w-5xl mx-auto py-10 sm:py-16 lg:py-24 h-full px-2 sm:px-6 lg:px-8">
         <ContactForm />
