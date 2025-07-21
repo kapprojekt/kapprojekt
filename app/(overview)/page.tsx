@@ -103,7 +103,7 @@ export default function Home() {
       <ProjectCarousel projectsData={projectsData} />
       <TestimonialCarousel testimonialData={data.testimonials!} />
       <Faq data={data.faq!} />
-      {/* <ImageSection data={data.imageSection!} /> */}
+      <ImageSection data={data.imageSection!} />
       <About />
       <section className="w-full max-w-5xl mx-auto py-10 sm:py-16 lg:py-24 h-full px-2 sm:px-6 lg:px-8">
         <ContactForm />
