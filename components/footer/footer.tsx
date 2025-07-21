@@ -47,6 +47,9 @@ const Footer = () => {
           </Link>
         ))}
       </div>
+      <a href="rodo.pdf" target="_blank" className="underline text-stone-500">
+        Regulamin strony
+      </a>
     </section>
   );
 };

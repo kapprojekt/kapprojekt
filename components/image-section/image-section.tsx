@@ -13,7 +13,7 @@ const ImageSection = ({ data }: { data: ImageSectionData }) => {
         width={1400}
         height={1200}
       />
-      <div className="pt-10 pb-20 px-10 bg-black/30 min-h-[35rem]">
+      <div className="pt-10 pb-20 px-4 sm:px-6 lg:px-8 text-center bg-black/30 min-h-[35rem]">
         <h2 className="text-2xl md:text-3xl lg:text-4xl font-bold py-10">
           {data.title}
         </h2>

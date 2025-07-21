@@ -97,8 +97,20 @@ const ContactForm = () => {
                   </p>
                 ))}
             </div>
-
             <div className="sm:col-span-2 mt-2">
+              <p className="text-sm my-4">
+                Administratorem danych osobowych jest KAP Projekt. Dane wpisane
+                w formularzu kontaktowym będą przetwarzane w celu odpowiedzi na
+                przesłane zapytanie zgodnie z{" "}
+                <a
+                  href="rodo.pdf"
+                  target="_blank"
+                  className="underline text-stone-500"
+                >
+                  regulaminem
+                </a>
+                .
+              </p>
               <Button type="submit" loading={isLoading}>
                 Wyślij
               </Button>
