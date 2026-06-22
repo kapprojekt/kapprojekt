@@ -16,6 +16,7 @@ description: >-
 
   To projekt, w którym elegancja spotyka się z funkcjonalnością, udowadniając, że odważne, jesienne kolory potrafią stworzyć niezwykle przytulną i ponadczasową przystań.
 location: Wrocław
+date: "2026"
 projectType: ""
 images:
   - image:
