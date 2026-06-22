@@ -15,6 +15,8 @@ description: >-
 
 
   To projekt, w którym elegancja spotyka się z funkcjonalnością, udowadniając, że odważne, jesienne kolory potrafią stworzyć niezwykle przytulną i ponadczasową przystań.
+location: Wrocław
+projectType: ""
 images:
   - image:
       - https://res.cloudinary.com/dsllxh346/image/upload/v1782162714/salon_cam_1_a9g5ql.jpg
