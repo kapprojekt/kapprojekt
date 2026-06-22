@@ -1,5 +1,5 @@
 ---
-order: 1
+order: 18
 isOnHomepage: true
 title: Dom z kolorem pod Wrocławiem
 description: >-
