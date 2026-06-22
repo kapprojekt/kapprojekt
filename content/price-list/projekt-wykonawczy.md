@@ -1,6 +1,6 @@
 ---
 title: Projekt Wykonawczy
-description: 180 zł/m2
+description: 230 zł/m2
 type: basic
 image:
   - https://res.cloudinary.com/dsllxh346/image/upload/v1752099817/1_salon_2_nowy_logo_hmoshs.jpg
