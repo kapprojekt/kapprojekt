@@ -1,7 +1,7 @@
 ---
 order: 1
 isOnHomepage: true
-title: Dom pod Wrocławiem
+title: Dom z kolorem pod Wrocławiem
 description: >-
   Naszym celem było stworzenie przestrzeni, która z jednej strony otula domowym
   ciepłem, a z drugiej intryguje odważnymi i eleganckimi rozwiązaniami
