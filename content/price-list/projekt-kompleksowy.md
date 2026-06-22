@@ -1,6 +1,6 @@
 ---
 title: Projekt Kompleksowy
-description: 150 zł/m2
+description: 170 zł/m2
 type: basic
 image:
   - https://res.cloudinary.com/dsllxh346/image/upload/v1752106275/K22_3_wo9hah.jpg
