@@ -1,5 +1,5 @@
 ---
-title: Projekt Kompleksowy
+title: Projekt Koncepcyjny+
 description: 170 zł/m2
 type: basic
 image:
